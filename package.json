@@ -1,0 +1,22 @@
+{
+  "name": "your-space-max",
+  "version": "1.0.0",
+  "description": "YOUR SPACE MAX - Official Corporate Portal",
+  "main": "index.html",
+  "scripts": {
+    "build": "node src/build.js",
+    "validate": "node scripts/validate.js"
+  },
+  "keywords": [
+    "incubator",
+    "startup",
+    "consulting",
+    "training",
+    "events",
+    "design",
+    "digital-solutions"
+  ],
+  "author": "YOUR SPACE MAX",
+  "license": "ISC"
+}
+

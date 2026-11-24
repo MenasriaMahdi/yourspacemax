@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خدماتنا المتكاملة | YOUR SPACE MAX</title>
+  <meta name="description" content="استكشف خدمات YOUR SPACE MAX الست: المرافقة والحاضنة، دراسات الاستثمار، التكوين، تنظيم الفعاليات، التصميم الإبداعي، والبرمجة والحلول الرقمية.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Main Design System CSS (Fonts & Custom Styles) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Tailwind CSS Engine & External Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+
+  <!-- Immediate Theme Initializer (prevents theme flickering) -->
+  <script src="assets/js/theme.js"></script>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-body antialiased transition-colors selection:bg-brand selection:text-white">
+
+  
+  <!-- Top Navigation Header -->
+  <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[92px] py-3 flex items-center justify-between">
+      
+      <!-- Brand Logo & Name: YOUR SPACE MAX -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand dark:bg-slate-800/90 border border-brand/30 dark:border-slate-700/80 p-0 flex items-center justify-center shrink-0 overflow-hidden transition-all duration-300 group-hover:scale-105 shadow-sm group-hover:shadow-md">
+          <img src="assets/images/logo.png" alt="YOUR SPACE MAX Logo" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-0.5">
+          <span class="text-xl sm:text-2xl font-bold font-latin tracking-tight text-slate-900 dark:text-white block leading-tight">YOUR SPACE MAX</span>
+          <span class="text-xs font-latin text-brand dark:text-brand-dark block tracking-wider uppercase font-semibold">YOUR JOURNEY. OUR SPACE.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav: الرئيسية | خدماتنا | تواصل معنا -->
+      <nav class="hidden md:flex items-center gap-8 lg:gap-10 font-headline font-medium text-sm lg:text-base">
+        <a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors">الرئيسية</a>
+        <a href="services.html" class="text-brand dark:text-brand-dark font-bold border-b-2 border-brand dark:border-brand-dark pb-1">خدماتنا</a>
+        <a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors">تواصل معنا</a>
+      </nav>
+
+      <!-- Actions: Single-Click Theme Toggle & CTA -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" type="button" aria-label="تبديل مظهر الموقع" class="w-10 h-10 rounded-xl flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-xs" title="تبديل الوضع الليلي / النهاري">
+          <svg class="w-5 h-5 hidden dark:block text-amber-400 transition-transform duration-200 hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="w-5 h-5 block dark:hidden text-slate-700 transition-transform duration-200 hover:-rotate-12" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+        </button>
+
+        <!-- CTA: اطلب خدمة -->
+        <a href="contact.html" class="inline-flex items-center justify-center px-4 sm:px-5 py-2.5 rounded-xl font-headline font-semibold text-xs sm:text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-all duration-200 shadow-sm hover:shadow-md">
+          اطلب خدمة
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobileMenuBtn" type="button" aria-label="فتح القائمة الرئيسية" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3 font-headline">
+      <div class="flex flex-col space-y-2">
+        <a href="index.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">الرئيسية</a>
+        <a href="services.html" class="px-3 py-2 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-bold">خدماتنا</a>
+        <a href="contact.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">تواصل معنا</a>
+      </div>
+      <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <a href="contact.html" class="w-full text-center py-2.5 rounded-lg bg-brand text-white dark:bg-brand-dark font-semibold text-sm">
+          اطلب خدمة
+        </a>
+      </div>
+    </div>
+  </header>
+  
+
+  <!-- Services Header Section -->
+  <section class="py-16 md:py-24 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-xs font-accent uppercase tracking-widest text-brand dark:text-brand-dark font-bold">باقة الحلول المتكاملة</span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-headline font-extrabold text-slate-900 dark:text-white">
+        خدمات متكاملة.. وحلول تناسب احتياجاتك
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-body max-w-3xl mx-auto leading-relaxed">
+        في <span class="font-latin font-bold text-slate-900 dark:text-white">YOUR SPACE MAX</span>، نجمع بين الخبرة الميدانية، المنهجية الريادية، والحلول العملية لنرافق الأفراد وحاملي المشاريع والمؤسسات في مختلف مراحل النمو — حضورياً وعن بُعد.
+      </p>
+    </div>
+  </section>
+
+  <!-- Detailed 6 Services Section -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      
+      
+      <!-- Service 1: حاضنة ومسرّع للمؤسسات الناشئة -->
+      <article id="service-1" class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center scroll-mt-28 ">
+        
+        <!-- Content Column (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 ">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-headline font-bold text-xs">
+            <span>الخدمة 01</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-headline font-extrabold text-slate-900 dark:text-white leading-tight">
+            حاضنة ومسرّع للمؤسسات الناشئة
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-body leading-relaxed">
+            برنامج مرافقة شامل صُمم خصيصاً لدعم الأفكار المبتكرة وتحويلها إلى مؤسسات ذات جدوى وقابلة للنمو السريع، بالاعتماد على منهجيات علمية وإشراف خبراء.
+          </p>
+
+          <!-- Target Audience Box -->
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider text-brand dark:text-brand-dark">الفئات المستهدفة:</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-300 font-body font-medium">
+              حاملو الأفكار الابتكارية، رواد الأعمال، وأصحاب المشاريع الناشئة والجامعية.
+            </p>
+          </div>
+
+          <!-- Deliverables List -->
+          <div class="space-y-3">
+            <h4 class="font-headline font-bold text-sm text-slate-900 dark:text-white">المخرجات والنتائج العملية:</h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 font-body">
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>بلورة الفكرة وتدقيق نموذج العمل التجاري (Business Model Canvas)</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>بناء خطة التحقق الميداني والنموذج الأولي الأولي (MVP)</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>التوجيه للتسجيل والتأهيل للحصول على وسم مشروع مبتكر (Label)</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>استراتيجيات الانطلاق والتوسع في السوق المحلي والجهوي</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <!-- Direct Request Button with URL parameter auto-fill -->
+          <div class="pt-2">
+            <a href="contact.html?service=service-1" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-headline font-bold text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
+              اطلب هذه الخدمة
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Media Anchor (5 cols) -->
+        <div class="lg:col-span-5 ">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 relative">
+            <img src="assets/images/service-incubator.jpg" alt="حاضنة ومسرّع للمؤسسات الناشئة" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
+          </div>
+        </div>
+
+      </article>
+      
+      <!-- Service 2: الاستشارات ودراسات الاستثمار -->
+      <article id="service-2" class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center scroll-mt-28 lg:grid-flow-dense">
+        
+        <!-- Content Column (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 lg:col-start-6">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-headline font-bold text-xs">
+            <span>الخدمة 02</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-headline font-extrabold text-slate-900 dark:text-white leading-tight">
+            الاستشارات ودراسات الاستثمار
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-body leading-relaxed">
+            حلول استشارية متخصصة ومبنية على أرقام واقعية لدعم المستثمرين وأصحاب المشاريع في التخطيط الإداري والمالي وتقييم الفرص الاستثمارية بدقة.
+          </p>
+
+          <!-- Target Audience Box -->
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider text-brand dark:text-brand-dark">الفئات المستهدفة:</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-300 font-body font-medium">
+              المؤسسات القائمة، المستثمرون، وأصحاب المشاريع قيد التأسيس والتوسع.
+            </p>
+          </div>
+
+          <!-- Deliverables List -->
+          <div class="space-y-3">
+            <h4 class="font-headline font-bold text-sm text-slate-900 dark:text-white">المخرجات والنتائج العملية:</h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 font-body">
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>دراسات الجدوى الاقتصادية والمالية الشاملة</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>صياغة خطط العمل التنفيذية (Business Plans) المعتمدة</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>استشارات التمويل وهيكلة الاستثمار</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>خطط التطوير الإداري والتحسين المؤسساتي</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <!-- Direct Request Button with URL parameter auto-fill -->
+          <div class="pt-2">
+            <a href="contact.html?service=service-2" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-headline font-bold text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
+              اطلب هذه الخدمة
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Media Anchor (5 cols) -->
+        <div class="lg:col-span-5 lg:col-start-1">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 relative">
+            <img src="assets/images/service-consulting.jpg" alt="الاستشارات ودراسات الاستثمار" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
+          </div>
+        </div>
+
+      </article>
+      
+      <!-- Service 3: التكوين والتعليم المهني -->
+      <article id="service-3" class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center scroll-mt-28 ">
+        
+        <!-- Content Column (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 ">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-headline font-bold text-xs">
+            <span>الخدمة 03</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-headline font-extrabold text-slate-900 dark:text-white leading-tight">
+            التكوين والتعليم المهني
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-body leading-relaxed">
+            ورش عمل ودورات تكوينية تفاعلية تستجيب لمتطلبات سوق العمل المعاصر، يقدمها مدربون معتمدون وممارسون ميدانيون بأساليب تطبيقية حديثة.
+          </p>
+
+          <!-- Target Audience Box -->
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider text-brand dark:text-brand-dark">الفئات المستهدفة:</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-300 font-body font-medium">
+              الأفراد، الطلاب والباحثون، فرق عمل الشركات والمؤسسات.
+            </p>
+          </div>
+
+          <!-- Deliverables List -->
+          <div class="space-y-3">
+            <h4 class="font-headline font-bold text-sm text-slate-900 dark:text-white">المخرجات والنتائج العملية:</h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 font-body">
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>دورات تدريبية متخصصة في ريادة الأعمال وإدارة المشاريع</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>برامج تأهيل تقني في البرمجة والحلول الرقمية</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>ورش عمل في التسويق الاستراتيجي وإدارة المبيعات</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>شهادات إتمام ومتابعة تطبيقية لما بعد التكوين</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <!-- Direct Request Button with URL parameter auto-fill -->
+          <div class="pt-2">
+            <a href="contact.html?service=service-3" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-headline font-bold text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
+              اطلب هذه الخدمة
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Media Anchor (5 cols) -->
+        <div class="lg:col-span-5 ">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 relative">
+            <img src="assets/images/service-training.jpg" alt="التكوين والتعليم المهني" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
+          </div>
+        </div>
+
+      </article>
+      
+      <!-- Service 4: تنظيم التظاهرات الاقتصادية والعلمية -->
+      <article id="service-4" class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center scroll-mt-28 lg:grid-flow-dense">
+        
+        <!-- Content Column (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 lg:col-start-6">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-headline font-bold text-xs">
+            <span>الخدمة 04</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-headline font-extrabold text-slate-900 dark:text-white leading-tight">
+            تنظيم التظاهرات الاقتصادية والعلمية
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-body leading-relaxed">
+            تنظيم لوجستي وإعلامي متكامل للفعاليات، بدءاً من التصور والبرمجة وصولاً إلى الإشراف الميداني والتغطية الإعلامية الاحترافية.
+          </p>
+
+          <!-- Target Audience Box -->
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider text-brand dark:text-brand-dark">الفئات المستهدفة:</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-300 font-body font-medium">
+              المؤسسات والشركات، الهيئات والجامعات، والجمعيات المهنية.
+            </p>
+          </div>
+
+          <!-- Deliverables List -->
+          <div class="space-y-3">
+            <h4 class="font-headline font-bold text-sm text-slate-900 dark:text-white">المخرجات والنتائج العملية:</h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 font-body">
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>التخطيط الشامل وإدارة جدول الفعالية والضيوف</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>التجهيز اللوجستي والتقني وحجز القاعات والمعدات</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>التغطية الإعلامية وصناعة المحتوى الرقمي المباشر</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>إصدار التوصيات والتقارير التقييمية الرسمية للفعالية</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <!-- Direct Request Button with URL parameter auto-fill -->
+          <div class="pt-2">
+            <a href="contact.html?service=service-4" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-headline font-bold text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
+              اطلب هذه الخدمة
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Media Anchor (5 cols) -->
+        <div class="lg:col-span-5 lg:col-start-1">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 relative">
+            <img src="assets/images/service-events.jpg" alt="تنظيم التظاهرات الاقتصادية والعلمية" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
+          </div>
+        </div>
+
+      </article>
+      
+      <!-- Service 5: التصميم والخدمات الإبداعية -->
+      <article id="service-5" class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center scroll-mt-28 ">
+        
+        <!-- Content Column (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 ">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-headline font-bold text-xs">
+            <span>الخدمة 05</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-headline font-extrabold text-slate-900 dark:text-white leading-tight">
+            التصميم والخدمات الإبداعية
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-body leading-relaxed">
+            ابتكار هويات بصرية أصيلة تعبر عن جوهر علامتك التجارية وتخلق أثراً مرئياً مستداماً لدى جمهورك المستهدف على كافة المنصات.
+          </p>
+
+          <!-- Target Audience Box -->
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider text-brand dark:text-brand-dark">الفئات المستهدفة:</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-300 font-body font-medium">
+              المشاريع الناشئة، المؤسسات الراغبة في إعادة بناء الهوية، والعلامات التجارية.
+            </p>
+          </div>
+
+          <!-- Deliverables List -->
+          <div class="space-y-3">
+            <h4 class="font-headline font-bold text-sm text-slate-900 dark:text-white">المخرجات والنتائج العملية:</h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 font-body">
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>تصميم الهوية البصرية ودليل المعايير (Brand Guidelines)</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>تصميم المواد التسويقية والمطبوعات المؤسساتية</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>تصميم الحملات الإعلانية ومنشورات شبكات التواصل</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>تصميم واجهات المستخدم (UI/UX) للتطبيقات والمواقع</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <!-- Direct Request Button with URL parameter auto-fill -->
+          <div class="pt-2">
+            <a href="contact.html?service=service-5" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-headline font-bold text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
+              اطلب هذه الخدمة
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Media Anchor (5 cols) -->
+        <div class="lg:col-span-5 ">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 relative">
+            <img src="assets/images/service-design.jpg" alt="التصميم والخدمات الإبداعية" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
+          </div>
+        </div>
+
+      </article>
+      
+      <!-- Service 6: البرمجة والحلول الرقمية -->
+      <article id="service-6" class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center scroll-mt-28 lg:grid-flow-dense">
+        
+        <!-- Content Column (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 lg:col-start-6">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-headline font-bold text-xs">
+            <span>الخدمة 06</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-headline font-extrabold text-slate-900 dark:text-white leading-tight">
+            البرمجة والحلول الرقمية
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-body leading-relaxed">
+            تطوير حلول برمجية متقدمة وآمنة، تتميز بالسرعة والتجاوب مع مختلف الأجهزة لتلبي الاحتياجات الرقمية لمؤسستك بكفاءة عالية.
+          </p>
+
+          <!-- Target Audience Box -->
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider text-brand dark:text-brand-dark">الفئات المستهدفة:</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-300 font-body font-medium">
+              أصحاب المشاريع الرقمية، المؤسسات التجارية، ومقدمو الخدمات.
+            </p>
+          </div>
+
+          <!-- Deliverables List -->
+          <div class="space-y-3">
+            <h4 class="font-headline font-bold text-sm text-slate-900 dark:text-white">المخرجات والنتائج العملية:</h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 font-body">
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>تطوير المواقع والمنصات المؤسساتية والتفاعلية</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>بناء المتاجر الإلكترونية وحلول الدفع الرقمي</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>تطوير التطبيقات البرمجية المخصصة ولوحات التحكم</span>
+              </li>
+              
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>الصيانة الدورية وخدمات استضافة ودعم الأمان الرقمي</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <!-- Direct Request Button with URL parameter auto-fill -->
+          <div class="pt-2">
+            <a href="contact.html?service=service-6" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-headline font-bold text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
+              اطلب هذه الخدمة
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Media Anchor (5 cols) -->
+        <div class="lg:col-span-5 lg:col-start-1">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 relative">
+            <img src="assets/images/service-digital.jpg" alt="البرمجة والحلول الرقمية" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
+          </div>
+        </div>
+
+      </article>
+      
+
+    </div>
+  </section>
+
+  <!-- Summary Table Section -->
+  <section class="py-16 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h3 class="text-2xl font-headline font-bold text-slate-900 dark:text-white">جدول ملخص الخدمات</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 font-body">نظرة شاملة وسريعة على باقة الخدمات ومخرجاتها</p>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+        <table class="w-full text-right text-sm">
+          <thead class="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-headline text-xs">
+            <tr>
+              <th class="py-3.5 px-4">#</th>
+              <th class="py-3.5 px-4">الخدمة</th>
+              <th class="py-3.5 px-4">الفئة المستهدفة</th>
+              <th class="py-3.5 px-4 text-center">الإجراء</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-700 dark:text-slate-300 font-body text-xs sm:text-sm">
+            
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+              <td class="py-3.5 px-4 font-latin font-bold text-brand dark:text-brand-dark">01</td>
+              <td class="py-3.5 px-4 font-headline font-bold text-slate-900 dark:text-white">حاضنة ومسرّع للمؤسسات الناشئة</td>
+              <td class="py-3.5 px-4">حاملو الأفكار الابتكارية، رواد الأعمال، وأصحاب المشاريع الناشئة والجامعية.</td>
+              <td class="py-3.5 px-4 text-center">
+                <a href="contact.html?service=service-1" class="text-brand dark:text-brand-dark font-headline font-bold hover:underline">
+                  طلب
+                </a>
+              </td>
+            </tr>
+            
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+              <td class="py-3.5 px-4 font-latin font-bold text-brand dark:text-brand-dark">02</td>
+              <td class="py-3.5 px-4 font-headline font-bold text-slate-900 dark:text-white">الاستشارات ودراسات الاستثمار</td>
+              <td class="py-3.5 px-4">المؤسسات القائمة، المستثمرون، وأصحاب المشاريع قيد التأسيس والتوسع.</td>
+              <td class="py-3.5 px-4 text-center">
+                <a href="contact.html?service=service-2" class="text-brand dark:text-brand-dark font-headline font-bold hover:underline">
+                  طلب
+                </a>
+              </td>
+            </tr>
+            
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+              <td class="py-3.5 px-4 font-latin font-bold text-brand dark:text-brand-dark">03</td>
+              <td class="py-3.5 px-4 font-headline font-bold text-slate-900 dark:text-white">التكوين والتعليم المهني</td>
+              <td class="py-3.5 px-4">الأفراد، الطلاب والباحثون، فرق عمل الشركات والمؤسسات.</td>
+              <td class="py-3.5 px-4 text-center">
+                <a href="contact.html?service=service-3" class="text-brand dark:text-brand-dark font-headline font-bold hover:underline">
+                  طلب
+                </a>
+              </td>
+            </tr>
+            
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+              <td class="py-3.5 px-4 font-latin font-bold text-brand dark:text-brand-dark">04</td>
+              <td class="py-3.5 px-4 font-headline font-bold text-slate-900 dark:text-white">تنظيم التظاهرات الاقتصادية والعلمية</td>
+              <td class="py-3.5 px-4">المؤسسات والشركات، الهيئات والجامعات، والجمعيات المهنية.</td>
+              <td class="py-3.5 px-4 text-center">
+                <a href="contact.html?service=service-4" class="text-brand dark:text-brand-dark font-headline font-bold hover:underline">
+                  طلب
+                </a>
+              </td>
+            </tr>
+            
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+              <td class="py-3.5 px-4 font-latin font-bold text-brand dark:text-brand-dark">05</td>
+              <td class="py-3.5 px-4 font-headline font-bold text-slate-900 dark:text-white">التصميم والخدمات الإبداعية</td>
+              <td class="py-3.5 px-4">المشاريع الناشئة، المؤسسات الراغبة في إعادة بناء الهوية، والعلامات التجارية.</td>
+              <td class="py-3.5 px-4 text-center">
+                <a href="contact.html?service=service-5" class="text-brand dark:text-brand-dark font-headline font-bold hover:underline">
+                  طلب
+                </a>
+              </td>
+            </tr>
+            
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+              <td class="py-3.5 px-4 font-latin font-bold text-brand dark:text-brand-dark">06</td>
+              <td class="py-3.5 px-4 font-headline font-bold text-slate-900 dark:text-white">البرمجة والحلول الرقمية</td>
+              <td class="py-3.5 px-4">أصحاب المشاريع الرقمية، المؤسسات التجارية، ومقدمو الخدمات.</td>
+              <td class="py-3.5 px-4 text-center">
+                <a href="contact.html?service=service-6" class="text-brand dark:text-brand-dark font-headline font-bold hover:underline">
+                  طلب
+                </a>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-16 bg-slate-900 text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+      <h3 class="text-2xl sm:text-3xl font-headline font-bold">جاهز للانطلاق بمشروعك؟</h3>
+      <p class="text-sm sm:text-base text-slate-300 font-body">فريق خبرائنا جاهز لمرافقتك وتخصيص الباقة الأنسب لأهدافك.</p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <a href="contact.html" class="px-7 py-3 rounded-lg font-headline font-bold text-sm bg-brand-dark text-white hover:bg-blue-600 transition-colors">
+          اطلب خدمة الآن
+        </a>
+        <a href="https://wa.me/213553182881" target="_blank" rel="noopener noreferrer" class="px-7 py-3 rounded-lg font-headline font-semibold text-sm bg-emerald-600 hover:bg-emerald-700 text-white transition-colors">
+          تواصل عبر WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-300 font-body border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-brand dark:bg-slate-800 border border-brand/40 dark:border-slate-700 p-0 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+              <img src="assets/images/logo.png" alt="YOUR SPACE MAX Logo" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span class="text-xl font-bold font-latin text-white block tracking-tight">YOUR SPACE MAX</span>
+              <span class="text-xs font-latin text-brand-dark tracking-wider uppercase font-semibold">YOUR JOURNEY. OUR SPACE.</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed font-body">
+            مساحتك للنمو والتطوير — حلول متكاملة حضورياً وعن بُعد في المرافقة، الاستشارات، التكوين، التنظيم، التصميم، والحلول الرقمية.
+          </p>
+        </div>
+
+        <!-- Headquarters & Phone (Spec Requirements) -->
+        <div class="space-y-4">
+          <h4 class="text-white font-headline font-bold text-base">المقر والتواصل</h4>
+          <ul class="space-y-3 text-xs text-slate-400">
+            <li class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-brand-dark shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span><strong>المقر:</strong> حاضنة أعمال جامعة قسنطينة 1</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-brand-dark shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <span>
+                <strong>الهاتف / WhatsApp:</strong><br>
+                <a href="tel:+213553182881" class="text-white hover:text-brand-dark transition-colors font-accent" dir="ltr">0553 18 28 81</a>
+                <span class="text-[11px] text-slate-500 block">(خدمة 24/24)</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick Links (Spec Requirements) -->
+        <div class="space-y-4">
+          <h4 class="text-white font-headline font-bold text-base">روابط سريعة</h4>
+          <ul class="space-y-2 text-xs font-headline">
+            <li><a href="index.html" class="hover:text-brand-dark transition-colors">الرئيسية</a></li>
+            <li><a href="index.html#about" class="hover:text-brand-dark transition-colors">من نحن</a></li>
+            <li><a href="services.html" class="hover:text-brand-dark transition-colors">خدماتنا</a></li>
+            <li><a href="index.html#achievements" class="hover:text-brand-dark transition-colors">إنجازاتنا</a></li>
+            <li><a href="contact.html" class="hover:text-brand-dark transition-colors">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct WhatsApp Action -->
+        <div class="space-y-4">
+          <h4 class="text-white font-headline font-bold text-base">محادثة فورية</h4>
+          <p class="text-xs text-slate-400 leading-relaxed font-body">
+            فريق YOUR SPACE MAX مستعد للرد على استفساراتكم ومرافقتكم فورياً.
+          </p>
+          <a href="https://wa.me/213553182881" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-headline text-sm font-semibold transition-colors shadow-sm">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>تواصل عبر WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>جميع الحقوق محفوظة © 2026 YOUR SPACE MAX.</p>
+        <p class="font-latin">Designed according to official brand guidelines.</p>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Client-side Modular Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
