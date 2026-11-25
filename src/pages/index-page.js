@@ -7,7 +7,6 @@ const renderHeader = require('../components/header');
 const renderFooter = require('../components/footer');
 const renderSideNav = require('../components/side-nav');
 const renderSocialBubble = require('../components/social-bubble');
-const renderExecutiveTeam = require('../components/executive-team');
 const data = require('../data/site-data');
 
 module.exports = function renderIndexPage() {
@@ -21,7 +20,6 @@ module.exports = function renderIndexPage() {
   const footer = renderFooter();
   const sideNav = renderSideNav();
   const socialBubble = renderSocialBubble();
-  const executiveTeam = renderExecutiveTeam();
 
   return `${head}
   ${header}
@@ -140,22 +138,24 @@ module.exports = function renderIndexPage() {
           `).join('')}
         </div>
 
-        <!-- Concluding Paragraph from Spec -->
-        <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center max-w-4xl mx-auto shadow-sm space-y-4">
+        <!-- Concluding Paragraph & Teaser to Dedicated About Page -->
+        <div class="p-8 sm:p-10 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center max-w-4xl mx-auto shadow-sm space-y-6">
           <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-body leading-relaxed">
             «نعمل على تحويل الأفكار إلى مشاريع قابلة للتنفيذ والنمو، من خلال توفير الخبرة والمرافقة والحلول المناسبة لمختلف الاحتياجات، <strong class="text-brand dark:text-brand-dark">حضورياً وعن بُعد</strong>.»
           </p>
-          <div class="pt-2">
-            <a href="about.html" class="inline-flex items-center gap-2 text-sm font-headline font-bold text-brand dark:text-brand-dark hover:underline">
-              <span>تعرف على تفاصيل مسيرتنا وفريقنا في صفحة «من نحن» المستقلة</span>
-              <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          
+          <div class="pt-5 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-right">
+              <span class="text-xs font-accent uppercase tracking-wider text-brand dark:text-brand-dark font-bold block">فريقنا وخبرتنا</span>
+              <p class="text-sm font-headline font-semibold text-slate-900 dark:text-white">تعرف على الإدارة التنفيذية وشبكة الخبراء ورؤيتنا ومنهجية عملنا</p>
+            </div>
+            <a href="about.html" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-brand hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 text-white font-headline font-bold text-sm transition-all shadow-sm shrink-0 group">
+              <span>استكشف صفحة من نحن وفريقنا</span>
+              <svg class="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
           </div>
         </div>
       </div>
-
-      <!-- الإدارة التنفيذية والفريق ورؤيتنا -->
-      ${executiveTeam}
 
     </div>
   </section>

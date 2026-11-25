@@ -92,7 +92,8 @@ pages.forEach(p => {
   const imgMatches = [...content.matchAll(/<img\b[^>]*src=["']([^"']+)["']/gi)];
   imgMatches.forEach(m => {
     const imgSrc = m[1];
-    const fullImgPath = path.join(rootDir, imgSrc);
+    const cleanSrc = imgSrc.split(/[?#]/)[0];
+    const fullImgPath = path.join(rootDir, cleanSrc);
     if (!fs.existsSync(fullImgPath)) {
       console.error(`  [X] Missing Image in ${p}: ${imgSrc}`);
       totalErrors++;

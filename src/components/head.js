@@ -10,7 +10,7 @@ module.exports = function renderHead({ title, description, activePage = '' }) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
   <meta name="description" content="${description}">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/png" href="assets/images/brand-logo.png?v=2">
 
   <!-- Main Design System CSS (Fonts & Custom Styles) -->
   <link rel="stylesheet" href="assets/css/style.css">
