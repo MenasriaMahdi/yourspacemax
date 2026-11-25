@@ -7,7 +7,7 @@ const path = require('path');
 const vm = require('vm');
 
 const rootDir = path.resolve(__dirname, '..');
-const pages = ['index.html', 'services.html', 'contact.html'];
+const pages = ['index.html', 'about.html', 'services.html', 'contact.html'];
 const pageContents = {};
 const pageIds = {};
 

@@ -20,9 +20,10 @@ module.exports = function renderHeader(activePage = 'home') {
         </div>
       </a>
 
-      <!-- Desktop Nav: الرئيسية | خدماتنا | تواصل معنا -->
-      <nav class="hidden md:flex items-center gap-8 lg:gap-10 font-headline font-medium text-sm lg:text-base">
+      <!-- Desktop Nav: الرئيسية | من نحن | خدماتنا | تواصل معنا -->
+      <nav class="hidden md:flex items-center gap-7 lg:gap-9 font-headline font-medium text-sm lg:text-base">
         <a href="index.html" class="${activePage === 'home' ? 'text-brand dark:text-brand-dark font-bold border-b-2 border-brand dark:border-brand-dark pb-1' : 'text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors'}">الرئيسية</a>
+        <a href="about.html" class="${activePage === 'about' ? 'text-brand dark:text-brand-dark font-bold border-b-2 border-brand dark:border-brand-dark pb-1' : 'text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors'}">من نحن</a>
         <a href="services.html" class="${activePage === 'services' ? 'text-brand dark:text-brand-dark font-bold border-b-2 border-brand dark:border-brand-dark pb-1' : 'text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors'}">خدماتنا</a>
         <a href="contact.html" class="${activePage === 'contact' ? 'text-brand dark:text-brand-dark font-bold border-b-2 border-brand dark:border-brand-dark pb-1' : 'text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors'}">تواصل معنا</a>
       </nav>
@@ -58,6 +59,7 @@ module.exports = function renderHeader(activePage = 'home') {
     <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3 font-headline">
       <div class="flex flex-col space-y-2">
         <a href="index.html" class="px-3 py-2 rounded-lg ${activePage === 'home' ? 'bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-bold' : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'}">الرئيسية</a>
+        <a href="about.html" class="px-3 py-2 rounded-lg ${activePage === 'about' ? 'bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-bold' : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'}">من نحن</a>
         <a href="services.html" class="px-3 py-2 rounded-lg ${activePage === 'services' ? 'bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-bold' : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'}">خدماتنا</a>
         <a href="contact.html" class="px-3 py-2 rounded-lg ${activePage === 'contact' ? 'bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-bold' : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'}">تواصل معنا</a>
       </div>

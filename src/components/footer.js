@@ -50,7 +50,7 @@ module.exports = function renderFooter() {
           <h4 class="text-white font-headline font-bold text-base">روابط سريعة</h4>
           <ul class="space-y-2 text-xs font-headline">
             <li><a href="index.html" class="hover:text-brand-dark transition-colors">الرئيسية</a></li>
-            <li><a href="index.html#about" class="hover:text-brand-dark transition-colors">من نحن</a></li>
+            <li><a href="about.html" class="hover:text-brand-dark transition-colors">من نحن</a></li>
             <li><a href="services.html" class="hover:text-brand-dark transition-colors">خدماتنا</a></li>
             <li><a href="index.html#achievements" class="hover:text-brand-dark transition-colors">إنجازاتنا</a></li>
             <li><a href="contact.html" class="hover:text-brand-dark transition-colors">تواصل معنا</a></li>

@@ -141,10 +141,16 @@ module.exports = function renderIndexPage() {
         </div>
 
         <!-- Concluding Paragraph from Spec -->
-        <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center max-w-4xl mx-auto shadow-sm">
+        <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center max-w-4xl mx-auto shadow-sm space-y-4">
           <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-body leading-relaxed">
             «نعمل على تحويل الأفكار إلى مشاريع قابلة للتنفيذ والنمو، من خلال توفير الخبرة والمرافقة والحلول المناسبة لمختلف الاحتياجات، <strong class="text-brand dark:text-brand-dark">حضورياً وعن بُعد</strong>.»
           </p>
+          <div class="pt-2">
+            <a href="about.html" class="inline-flex items-center gap-2 text-sm font-headline font-bold text-brand dark:text-brand-dark hover:underline">
+              <span>تعرف على تفاصيل مسيرتنا وفريقنا في صفحة «من نحن» المستقلة</span>
+              <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
         </div>
       </div>
 

@@ -7,6 +7,7 @@ const path = require('path');
 
 const rootDir = path.resolve(__dirname, '..');
 const renderIndexPage = require('./pages/index-page');
+const renderAboutPage = require('./pages/about-page');
 const renderServicesPage = require('./pages/services-page');
 const renderContactPage = require('./pages/contact-page');
 
@@ -14,6 +15,7 @@ console.log('Building YOUR SPACE MAX production site from src/ ...');
 
 const pages = [
   { file: 'index.html', html: renderIndexPage() },
+  { file: 'about.html', html: renderAboutPage() },
   { file: 'services.html', html: renderServicesPage() },
   { file: 'contact.html', html: renderContactPage() }
 ];
