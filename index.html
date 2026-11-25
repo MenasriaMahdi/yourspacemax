@@ -35,19 +35,30 @@
         </div>
       </a>
 
-      <!-- Desktop Nav: الرئيسية | من نحن | خدماتنا | تواصل معنا -->
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-7 lg:gap-9 font-headline font-medium text-sm lg:text-base">
+        
         <a href="index.html" class="text-brand dark:text-brand-dark font-bold border-b-2 border-brand dark:border-brand-dark pb-1">الرئيسية</a>
+        
         <a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors">من نحن</a>
+        
         <a href="services.html" class="text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors">خدماتنا</a>
+        
         <a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors">تواصل معنا</a>
+        
       </nav>
 
-      <!-- Actions: Single-Click Theme Toggle & CTA -->
-      <div class="flex items-center gap-3 sm:gap-4">
+      <!-- Actions: Language Switcher, Theme Toggle & CTA -->
+      <div class="flex items-center gap-2.5 sm:gap-3.5">
         
+        <!-- Language Switcher Pill -->
+        <a href="fr/index.html" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-brand dark:hover:text-brand-dark hover:border-brand/40 text-xs font-bold transition-all shadow-xs" title="Passer en Français" aria-label="Passer en Français">
+          <svg class="w-4 h-4 text-brand dark:text-brand-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+          <span class="font-latin">FR</span>
+        </a>
+
         <!-- Theme Toggle Button -->
-        <button id="themeToggleBtn" type="button" aria-label="تبديل مظهر الموقع" class="w-10 h-10 rounded-xl flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-xs" title="تبديل الوضع الليلي / النهاري">
+        <button id="themeToggleBtn" type="button" aria-label="تبديل المظهر (ليلي / نهاري)" class="w-10 h-10 rounded-xl flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-xs" title="تبديل المظهر (ليلي / نهاري)">
           <svg class="w-5 h-5 hidden dark:block text-amber-400 transition-transform duration-200 hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
@@ -56,13 +67,13 @@
           </svg>
         </button>
 
-        <!-- CTA: اطلب خدمة -->
+        <!-- CTA: اطلب خدمة / Demander un service -->
         <a href="contact.html" class="inline-flex items-center justify-center px-4 sm:px-5 py-2.5 rounded-xl font-headline font-semibold text-xs sm:text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-all duration-200 shadow-sm hover:shadow-md">
           اطلب خدمة
         </a>
 
         <!-- Mobile Menu Hamburger Button -->
-        <button id="mobileMenuBtn" type="button" aria-label="فتح القائمة الرئيسية" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none">
+        <button id="mobileMenuBtn" type="button" aria-label="Menu" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -73,13 +84,22 @@
     <!-- Mobile Drawer Menu -->
     <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3 font-headline">
       <div class="flex flex-col space-y-2">
+        
         <a href="index.html" class="px-3 py-2 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-bold">الرئيسية</a>
+        
         <a href="about.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">من نحن</a>
+        
         <a href="services.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">خدماتنا</a>
+        
         <a href="contact.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">تواصل معنا</a>
+        
       </div>
-      <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
-        <a href="contact.html" class="w-full text-center py-2.5 rounded-lg bg-brand text-white dark:bg-brand-dark font-semibold text-sm">
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3">
+        <a href="fr/index.html" class="flex-1 text-center py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold text-xs flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 text-brand dark:text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+          <span>Passer en Français</span>
+        </a>
+        <a href="contact.html" class="flex-1 text-center py-2.5 rounded-lg bg-brand text-white dark:bg-brand-dark font-semibold text-xs">
           اطلب خدمة
         </a>
       </div>
@@ -89,31 +109,31 @@
   
   <!-- Floating Side Section Navigator (Scrollspy) -->
   <aside id="sideNav" aria-label="التنقل بين أقسام الصفحة" class="hidden lg:flex fixed right-5 top-1/2 -translate-y-1/2 z-40 flex-col items-center gap-2 p-2 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 shadow-lg transition-all">
-    <a href="#hero" data-section="hero" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="الواجهة الرئيسية" title="الواجهة الرئيسية">
+    <a href="#hero" data-section="hero" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="01 • الواجهة الرئيسية" title="01 • الواجهة الرئيسية">
       <span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 transition-all duration-300 indicator-dot"></span>
       <span class="pointer-events-none absolute right-11 px-2.5 py-1 rounded-lg bg-slate-900 dark:bg-slate-800 text-white text-xs font-headline font-semibold shadow-md whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
         01 • الواجهة الرئيسية
       </span>
     </a>
-    <a href="#about" data-section="about" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="من نحن والفريق" title="من نحن والفريق">
+    <a href="#about" data-section="about" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="02 • من نحن ومسارنا" title="02 • من نحن ومسارنا">
       <span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 transition-all duration-300 indicator-dot"></span>
       <span class="pointer-events-none absolute right-11 px-2.5 py-1 rounded-lg bg-slate-900 dark:bg-slate-800 text-white text-xs font-headline font-semibold shadow-md whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
-        02 • من نحن وفريقنا
+        02 • من نحن ومسارنا
       </span>
     </a>
-    <a href="#services" data-section="services" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="خدماتنا" title="خدماتنا">
+    <a href="#services" data-section="services" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="03 • خدماتنا" title="03 • خدماتنا">
       <span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 transition-all duration-300 indicator-dot"></span>
       <span class="pointer-events-none absolute right-11 px-2.5 py-1 rounded-lg bg-slate-900 dark:bg-slate-800 text-white text-xs font-headline font-semibold shadow-md whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
         03 • خدماتنا
       </span>
     </a>
-    <a href="#achievements" data-section="achievements" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="إنجازاتنا بالأرقام" title="إنجازاتنا بالأرقام">
+    <a href="#achievements" data-section="achievements" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="04 • إنجازاتنا بالأرقام" title="04 • إنجازاتنا بالأرقام">
       <span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 transition-all duration-300 indicator-dot"></span>
       <span class="pointer-events-none absolute right-11 px-2.5 py-1 rounded-lg bg-slate-900 dark:bg-slate-800 text-white text-xs font-headline font-semibold shadow-md whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
         04 • إنجازاتنا بالأرقام
       </span>
     </a>
-    <a href="#cta" data-section="cta" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="انطلق بمشروعك" title="انطلق بمشروعك">
+    <a href="#cta" data-section="cta" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="05 • ابدأ الآن" title="05 • ابدأ الآن">
       <span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 transition-all duration-300 indicator-dot"></span>
       <span class="pointer-events-none absolute right-11 px-2.5 py-1 rounded-lg bg-slate-900 dark:bg-slate-800 text-white text-xs font-headline font-semibold shadow-md whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
         05 • ابدأ الآن
@@ -149,18 +169,18 @@
             </a>
           </div>
 
-          <!-- Quick Proof Points (Spec Aligned) -->
+          <!-- Quick Proof Points -->
           <div class="pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-6 text-xs font-accent text-slate-500 dark:text-slate-400">
             <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-brand dark:text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <svg class="w-4 h-4 text-brand dark:text-brand-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
               <span>مرافقة حضورياً وعن بُعد</span>
             </div>
             <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-brand dark:text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <svg class="w-4 h-4 text-brand dark:text-brand-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
               <span>حاضنة أعمال جامعة قسنطينة 1</span>
             </div>
             <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-brand dark:text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <svg class="w-4 h-4 text-brand dark:text-brand-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
               <span>حلول ريادية متكاملة</span>
             </div>
           </div>
@@ -170,7 +190,7 @@
         <div class="lg:col-span-5">
           <div class="relative mx-auto max-w-md lg:max-w-none">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 relative">
-              <img src="assets/images/hero-corporate.jpg" alt="فضاء ريادة الأعمال YOUR SPACE MAX" class="w-full h-full object-cover">
+              <img src="assets/images/hero-corporate.jpg" alt="YOUR SPACE MAX" class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
               
               <!-- Subtle Badge -->
@@ -186,7 +206,7 @@
     </div>
   </section>
 
-  <!-- 2. من نحن؟ (About Us & Structured Timeline) -->
+  <!-- 2. من نحن؟ / À Propos (About Us & Structured Timeline) -->
   <section id="about" class="py-20 md:py-28 bg-slate-50 dark:bg-slate-900/50 border-b border-slate-200 dark:border-slate-800 scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
@@ -203,7 +223,7 @@
           </p>
         </div>
 
-        <!-- Narrative Essay from Spec -->
+        <!-- Narrative Essay -->
         <div class="lg:col-span-7 space-y-6 text-slate-700 dark:text-slate-300 font-body text-base sm:text-lg leading-relaxed">
           <p>
             <strong class="font-latin text-slate-900 dark:text-white font-bold">YOUR SPACE MAX</strong> شركة متعددة الخدمات، تقدم حلولاً متكاملة في مجالات مرافقة المشاريع والمؤسسات، الاستشارات ودراسات الاستثمار، التكوين، تنظيم التظاهرات الاقتصادية والعلمية، التصميم والخدمات الإبداعية، والبرمجة والحلول الرقمية.
@@ -214,7 +234,7 @@
         </div>
       </div>
 
-      <!-- الخط الزمني (Timeline) لمحطات التطور (Exact Spec) -->
+      <!-- الخط الزمني (Timeline) لمحطات التطور -->
       <div class="space-y-8 pt-4">
         <h3 class="text-xl font-headline font-bold text-slate-900 dark:text-white text-center">
           محطات التطور الريادي
@@ -271,7 +291,7 @@
         <!-- Concluding Paragraph & Teaser to Dedicated About Page -->
         <div class="p-8 sm:p-10 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center max-w-4xl mx-auto shadow-sm space-y-6">
           <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-body leading-relaxed">
-            «نعمل على تحويل الأفكار إلى مشاريع قابلة للتنفيذ والنمو، من خلال توفير الخبرة والمرافقة والحلول المناسبة لمختلف الاحتياجات، <strong class="text-brand dark:text-brand-dark">حضورياً وعن بُعد</strong>.»
+            «نعمل على تحويل الأفكار إلى مشاريع قابلة للتنفيذ والنمو، من خلال توفير الخبرة والمرافقة والحلول المناسبة لمختلف الاحتياجات، <strong class="text-brand dark:text-brand-dark font-bold">حضورياً وعن بُعد</strong>.»
           </p>
           
           <div class="pt-5 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -290,7 +310,7 @@
     </div>
   </section>
 
-  <!-- 3. خدماتنا (بطاقات مختصرة - 6 Services from Spec) -->
+  <!-- 3. خدماتنا / Nos Services -->
   <section id="services" class="py-20 md:py-28 border-b border-slate-200 dark:border-slate-800 scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
@@ -301,7 +321,7 @@
           خدمات متكاملة.. وحلول تناسب احتياجاتك
         </h2>
         <p class="text-slate-600 dark:text-slate-400 font-body text-base">
-          نقدم حلولاً مدروسة تجمع بين الخبرة الميدانية والمواكبة التقنية المتطورة.
+          نجمع بين الخبرة الميدانية، المنهجية الريادية، والحلول العملية لنرافق الأفراد وحاملي المشاريع والمؤسسات في مختلف مراحل النمو — حضورياً وعن بُعد.
         </p>
       </div>
 
@@ -438,15 +458,18 @@
     </div>
   </section>
 
-  <!-- 4. إنجازاتنا بالأرقام (Strictly The 5 Authorized Metrics from Spec) -->
+  <!-- 4. إنجازاتنا بالأرقام / Chiffres Clés -->
   <section id="achievements" class="py-20 md:py-24 bg-slate-50 dark:bg-slate-900/50 border-b border-slate-200 dark:border-slate-800 scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
       <div class="text-center max-w-2xl mx-auto space-y-3">
-        <span class="text-xs font-accent uppercase tracking-widest text-brand dark:text-brand-dark font-bold">أثرنا الميداني</span>
+        <span class="text-xs font-accent uppercase tracking-widest text-brand dark:text-brand-dark font-bold">إنجازاتنا بالأرقام</span>
         <h2 class="text-3xl sm:text-4xl font-headline font-extrabold text-slate-900 dark:text-white">
-          خطواتنا وإنجازاتنا تعكس أثرنا
+          أرقام تعكس التزامنا وجودة خدماتنا
         </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-body">
+          خلال مسارنا الريادي، حققنا محطات نوعية وشراكات فاعلة ساهمت في دعم بيئة ريادة الأعمال والابتكار.
+        </p>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
@@ -454,41 +477,46 @@
         <div class=" p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
           <div class="text-4xl sm:text-5xl font-extrabold font-accent text-brand dark:text-brand-dark" dir="ltr">32+</div>
           <p class="text-sm font-headline text-slate-700 dark:text-slate-300 font-medium">مشروعاً تمت مرافقتها</p>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block font-body">حلول واقعية ملموسة</span>
         </div>
         
         <div class=" p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
           <div class="text-4xl sm:text-5xl font-extrabold font-accent text-brand dark:text-brand-dark" dir="ltr">18</div>
           <p class="text-sm font-headline text-slate-700 dark:text-slate-300 font-medium">جامعة وصل إليها نشاط الشركة</p>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block font-body">شبكة علاقات واسعة</span>
         </div>
         
         <div class=" p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
           <div class="text-4xl sm:text-5xl font-extrabold font-accent text-brand dark:text-brand-dark" dir="ltr">3</div>
           <p class="text-sm font-headline text-slate-700 dark:text-slate-300 font-medium">ملتقيات علمية واقتصادية</p>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block font-body">تنظيم وإشراف متكامل</span>
         </div>
         
         <div class=" p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
           <div class="text-4xl sm:text-5xl font-extrabold font-accent text-brand dark:text-brand-dark" dir="ltr">8</div>
           <p class="text-sm font-headline text-slate-700 dark:text-slate-300 font-medium">معارض تم الحضور فيها</p>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block font-body">تمثيل ريادي وازن</span>
         </div>
         
         <div class="col-span-2 md:col-span-1 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
           <div class="text-4xl sm:text-5xl font-extrabold font-accent text-brand dark:text-brand-dark" dir="ltr">5+</div>
-          <p class="text-sm font-headline text-slate-700 dark:text-slate-300 font-medium">مشاريع استفادت للحصول على وسم مشروع مبتكر</p>
+          <p class="text-sm font-headline text-slate-700 dark:text-slate-300 font-medium">مشاريع استفادت لوسم مشروع مبتكر</p>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block font-body">تأهيل واعتماد رسمي</span>
         </div>
         
       </div>
     </div>
   </section>
 
-  <!-- 5. دعوة لاتخاذ إجراء (CTA from Spec) -->
+  <!-- 5. دعوة لاتخاذ إجراء (CTA) -->
   <section id="cta" class="py-20 bg-slate-900 text-white relative scroll-mt-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
       <span class="text-xs font-accent uppercase tracking-widest text-brand-dark font-bold">ابدأ مسارك الآن</span>
       <h2 class="text-3xl sm:text-4xl font-headline font-extrabold tracking-tight">
-        لديك فكرة أو مشروع؟ نحن هنا لمرافقتك.
+        جاهز لإطلاق مشروعك وتطوير أعمالك؟
       </h2>
       <p class="text-base sm:text-lg text-slate-300 font-body max-w-2xl mx-auto leading-relaxed">
-        سواء كنت صاحب فكرة أو مؤسسة تبحث عن حلول متخصصة، فإن فريق <span class="font-latin font-bold text-white">YOUR SPACE MAX</span> مستعد للتواصل معك وتقديم الخدمات المناسبة لاحتياجاتك.
+        فريق YOUR SPACE MAX مستعد لمرافقتك وتقديم الحلول المناسبة لاحتياجاتك بكل احترافية.
       </p>
       <div class="flex flex-wrap justify-center gap-4 pt-4">
         <a href="contact.html" class="px-8 py-3.5 rounded-lg font-headline font-bold text-base bg-brand-dark text-white hover:bg-blue-600 transition-colors shadow-md">
@@ -496,7 +524,7 @@
         </a>
         <a href="https://wa.me/213553182881" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-lg font-headline font-semibold text-base bg-emerald-600 hover:bg-emerald-700 text-white transition-colors flex items-center gap-2">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-          <span>تواصل معنا عبر WhatsApp</span>
+          <span>تواصل عبر WhatsApp</span>
         </a>
       </div>
     </div>
@@ -548,30 +576,18 @@
           LinkedIn
         </span>
       </a>
-
     </div>
 
-    <!-- Main Toggle Action Button -->
-    <button id="socialBubbleToggle" type="button" aria-label="فتح شبكات التواصل الاجتماعي" class="relative group flex items-center justify-center w-14 h-14 rounded-full bg-brand dark:bg-brand-dark text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none">
-      
-      <!-- Subtle Attention Pulse Ring -->
-      <span class="absolute -inset-1 rounded-full bg-brand/30 dark:bg-brand-dark/40 animate-pulse pointer-events-none"></span>
-
-      <!-- Chat / Social Icon (Visible when closed) -->
-      <svg id="bubbleIconChat" class="w-6 h-6 transform transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Main Bubble Floating Trigger Button -->
+    <button id="socialBubbleToggle" type="button" aria-label="فتح قنوات التواصل السريعة" class="w-14 h-14 rounded-full bg-brand hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 text-white shadow-xl hover:shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none ring-4 ring-white/20">
+      <!-- Chat Icon -->
+      <svg id="bubbleIconChat" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
       </svg>
-
-      <!-- Close (X) Icon (Visible when opened) -->
-      <svg id="bubbleIconClose" class="w-6 h-6 hidden transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- Close Icon -->
+      <svg id="bubbleIconClose" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
-
-      <!-- Hover Tooltip -->
-      <span class="pointer-events-none absolute left-full ml-3.5 px-3 py-1.5 rounded-xl bg-slate-900/95 dark:bg-slate-800 text-white text-xs font-headline font-bold shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span>تواصل معنا عبر شبكاتنا</span>
-      </span>
     </button>
   </aside>
   
@@ -603,12 +619,12 @@
           <ul class="space-y-3 text-xs text-slate-400">
             <li class="flex items-start gap-2.5">
               <svg class="w-4 h-4 text-brand-dark shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              <span><strong>المقر:</strong> حاضنة أعمال جامعة قسنطينة 1</span>
+              <span><strong>المقر الرئيسي:</strong> حاضنة أعمال جامعة قسنطينة 1</span>
             </li>
             <li class="flex items-start gap-2.5">
               <svg class="w-4 h-4 text-brand-dark shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               <span>
-                <strong>الهاتف / WhatsApp:</strong><br>
+                <strong>Téléphone / WhatsApp:</strong><br>
                 <a href="tel:+213553182881" class="text-white hover:text-brand-dark transition-colors font-accent" dir="ltr">0553 18 28 81</a>
                 <span class="text-[11px] text-slate-500 block">(خدمة 24/24)</span>
               </span>
@@ -620,11 +636,16 @@
         <div class="space-y-4">
           <h4 class="text-white font-headline font-bold text-base">روابط سريعة</h4>
           <ul class="space-y-2 text-xs font-headline">
+            
             <li><a href="index.html" class="hover:text-brand-dark transition-colors">الرئيسية</a></li>
+            
             <li><a href="about.html" class="hover:text-brand-dark transition-colors">من نحن</a></li>
+            
             <li><a href="services.html" class="hover:text-brand-dark transition-colors">خدماتنا</a></li>
-            <li><a href="index.html#achievements" class="hover:text-brand-dark transition-colors">إنجازاتنا</a></li>
+            
             <li><a href="contact.html" class="hover:text-brand-dark transition-colors">تواصل معنا</a></li>
+            
+            <li><a href="index.html#achievements" class="hover:text-brand-dark transition-colors">إنجازاتنا</a></li>
           </ul>
         </div>
 
@@ -662,7 +683,16 @@
 
       <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
         <p>جميع الحقوق محفوظة © 2026 YOUR SPACE MAX.</p>
-        <p class="font-latin">Designed according to official brand guidelines.</p>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 font-headline">
+            <span class="text-slate-400">اللغة:</span>
+            <a href="index.html" class="text-brand-dark font-bold">العربية</a>
+            <span class="text-slate-700">|</span>
+            <a href="fr/index.html" class="hover:text-white">Français</a>
+          </div>
+          <span class="hidden sm:inline text-slate-700">•</span>
+          <p class="font-latin">Designed according to official brand guidelines.</p>
+        </div>
       </div>
     </div>
   </footer>

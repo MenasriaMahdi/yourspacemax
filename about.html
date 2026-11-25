@@ -35,19 +35,30 @@
         </div>
       </a>
 
-      <!-- Desktop Nav: الرئيسية | من نحن | خدماتنا | تواصل معنا -->
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-7 lg:gap-9 font-headline font-medium text-sm lg:text-base">
+        
         <a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors">الرئيسية</a>
+        
         <a href="about.html" class="text-brand dark:text-brand-dark font-bold border-b-2 border-brand dark:border-brand-dark pb-1">من نحن</a>
+        
         <a href="services.html" class="text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors">خدماتنا</a>
+        
         <a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-brand dark:hover:text-brand-dark transition-colors">تواصل معنا</a>
+        
       </nav>
 
-      <!-- Actions: Single-Click Theme Toggle & CTA -->
-      <div class="flex items-center gap-3 sm:gap-4">
+      <!-- Actions: Language Switcher, Theme Toggle & CTA -->
+      <div class="flex items-center gap-2.5 sm:gap-3.5">
         
+        <!-- Language Switcher Pill -->
+        <a href="fr/about.html" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-brand dark:hover:text-brand-dark hover:border-brand/40 text-xs font-bold transition-all shadow-xs" title="Passer en Français" aria-label="Passer en Français">
+          <svg class="w-4 h-4 text-brand dark:text-brand-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+          <span class="font-latin">FR</span>
+        </a>
+
         <!-- Theme Toggle Button -->
-        <button id="themeToggleBtn" type="button" aria-label="تبديل مظهر الموقع" class="w-10 h-10 rounded-xl flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-xs" title="تبديل الوضع الليلي / النهاري">
+        <button id="themeToggleBtn" type="button" aria-label="تبديل المظهر (ليلي / نهاري)" class="w-10 h-10 rounded-xl flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-xs" title="تبديل المظهر (ليلي / نهاري)">
           <svg class="w-5 h-5 hidden dark:block text-amber-400 transition-transform duration-200 hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
@@ -56,13 +67,13 @@
           </svg>
         </button>
 
-        <!-- CTA: اطلب خدمة -->
+        <!-- CTA: اطلب خدمة / Demander un service -->
         <a href="contact.html" class="inline-flex items-center justify-center px-4 sm:px-5 py-2.5 rounded-xl font-headline font-semibold text-xs sm:text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-all duration-200 shadow-sm hover:shadow-md">
           اطلب خدمة
         </a>
 
         <!-- Mobile Menu Hamburger Button -->
-        <button id="mobileMenuBtn" type="button" aria-label="فتح القائمة الرئيسية" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none">
+        <button id="mobileMenuBtn" type="button" aria-label="Menu" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -73,13 +84,22 @@
     <!-- Mobile Drawer Menu -->
     <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3 font-headline">
       <div class="flex flex-col space-y-2">
+        
         <a href="index.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">الرئيسية</a>
+        
         <a href="about.html" class="px-3 py-2 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-bold">من نحن</a>
+        
         <a href="services.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">خدماتنا</a>
+        
         <a href="contact.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">تواصل معنا</a>
+        
       </div>
-      <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
-        <a href="contact.html" class="w-full text-center py-2.5 rounded-lg bg-brand text-white dark:bg-brand-dark font-semibold text-sm">
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3">
+        <a href="fr/about.html" class="flex-1 text-center py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold text-xs flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 text-brand dark:text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+          <span>Passer en Français</span>
+        </a>
+        <a href="contact.html" class="flex-1 text-center py-2.5 rounded-lg bg-brand text-white dark:bg-brand-dark font-semibold text-xs">
           اطلب خدمة
         </a>
       </div>
@@ -97,7 +117,7 @@
             <span>من نحن؟ • About Us</span>
           </div>
           <h1 class="text-3xl sm:text-4xl md:text-5xl font-headline font-extrabold text-slate-900 dark:text-white leading-tight">
-            مساحتك للنمو والتطوير
+            مساحتك للنمو والتطوير.
           </h1>
           <p class="font-headline text-xl sm:text-2xl text-brand dark:text-brand-dark italic font-latin">
             «YOUR JOURNEY. OUR SPACE.»
@@ -110,7 +130,7 @@
         <div class="lg:col-span-4">
           <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark flex items-center justify-center">
+              <div class="w-10 h-10 rounded-lg bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark flex items-center justify-center shrink-0">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
               </div>
               <div>
@@ -119,7 +139,7 @@
               </div>
             </div>
             <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
               </div>
               <div>
@@ -139,12 +159,12 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
       <div class="text-center max-w-3xl mx-auto space-y-4">
-        <span class="text-xs font-accent uppercase tracking-widest text-brand dark:text-brand-dark font-bold block">مسارنا الريادي</span>
+        <span class="text-xs font-accent uppercase tracking-widest text-brand dark:text-brand-dark font-bold block">من نحن؟</span>
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-slate-900 dark:text-white">
           محطات التطور من الفكرة إلى المؤسسة
         </h2>
         <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-body leading-relaxed">
-          انطلقت الشركة من مشروع ابتكاري في الوسط الجامعي، وتطورت عبر محطات ريادية متميزة، وصولاً إلى تجسيد المشروع في شكل مؤسسة اقتصادية متكاملة.
+          انطلقت الشركة من مشروع ابتكاري في الوسط الجامعي، وتطورت عبر محطات ريادية متميزة، وصولاً إلى تجسيد المشروع في شكل مؤسسة اقتصادية.
         </p>
       </div>
 
@@ -215,10 +235,10 @@
     <!-- Section Sub-Header -->
     <div class="text-center max-w-3xl mx-auto space-y-3">
       <span class="text-xs font-accent uppercase tracking-widest text-brand dark:text-brand-dark font-bold block">
-        القيادة والكفاءات
+        الإدارة التنفيذية والفريق
       </span>
       <h3 class="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-slate-900 dark:text-white">
-        الإدارة التنفيذية والفريق
+        القيادة والكفاءات
       </h3>
       <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-body leading-relaxed">
         رؤية استراتيجية طموحة تجمع بين الخبرة القانونية والإدارية والتكنولوجية، مدعومة بنخبة من الخبراء والمتخصصين.
@@ -231,7 +251,7 @@
       <!-- Ambient Background Glow -->
       <div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-brand/5 dark:bg-brand-dark/10 blur-3xl pointer-events-none"></div>
 
-      <!-- Main Two-Column Layout: Big Wide Portrait at the Beginning (Right in RTL) + Full Bio on the Other Side -->
+      <!-- Main Two-Column Layout: Big Wide Portrait at the Beginning (Right in RTL, Left in LTR) + Full Bio on the Other Side -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
         
         <!-- Column 1: Big Wide Portrait & Identity & Socials (lg:col-span-5) -->
@@ -239,7 +259,7 @@
           
           <!-- Big Wide Portrait Photo -->
           <div class="relative group rounded-3xl overflow-hidden shadow-2xl border-2 border-brand/20 dark:border-brand-dark/30 bg-slate-100 dark:bg-slate-800 aspect-square sm:aspect-[4/5] lg:aspect-square w-full">
-            <img src="assets/images/about-me.jpg" alt="FILALI SARA | فيلالي سارة - Founder & CEO" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+            <img src="assets/images/about-me.jpg" alt="FILALI SARA - Founder & CEO" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
             
             <!-- Floating Overlay Badge at bottom -->
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-transparent p-5 sm:p-6 text-white flex flex-col justify-end">
@@ -482,71 +502,65 @@
 
     </div>
 
-    <!-- 3. رؤيتنا ومنهجية عملنا (Our Vision & Core Methodology Values) -->
-    <div class="p-8 sm:p-10 rounded-3xl bg-slate-900 text-white space-y-6">
-      
+    <!-- 3. رؤيتنا ومنهجية عملنا (5 Core Methodology Values) -->
+    <div class="p-8 sm:p-10 rounded-3xl bg-slate-900 text-white space-y-8 border border-slate-800">
       <div class="text-center max-w-2xl mx-auto space-y-2">
-        <span class="text-xs font-accent uppercase tracking-widest text-brand-dark font-bold block">
-          ركائز التميز
+        <span class="text-xs font-latin uppercase tracking-widest text-brand-dark font-bold block">
+          OUR VALUES • OUR PILLARS
         </span>
-        <h4 class="text-xl sm:text-2xl font-headline font-extrabold text-white">
+        <h4 class="text-2xl sm:text-3xl font-headline font-extrabold text-white">
           رؤيتنا ومنهجية عملنا
         </h4>
-        <p class="text-xs sm:text-sm text-slate-300 font-body">
-          قيم حاكمة ترشد مسارنا وتضمن تحقيق أفضل أثر مستدام لمشاريع شركائنا.
-        </p>
       </div>
 
-      <!-- Values Cards Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 pt-2">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
         
-        <div class="p-4 rounded-xl bg-slate-800/90 border border-slate-700/80 text-center space-y-1.5 hover:border-brand-dark transition-all duration-200 group">
-          <span class="font-latin text-xs font-extrabold text-brand-dark tracking-wider block uppercase group-hover:text-white transition-colors">
+        <div class="p-5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1.5 hover:border-brand-dark transition-colors">
+          <span class="font-latin text-xs font-extrabold tracking-wider text-brand-dark block uppercase">
             INNOVATION
           </span>
-          <span class="font-headline font-bold text-sm text-white block">
+          <span class="font-headline text-sm sm:text-base font-bold text-white block">
             الابتكار
           </span>
         </div>
         
-        <div class="p-4 rounded-xl bg-slate-800/90 border border-slate-700/80 text-center space-y-1.5 hover:border-brand-dark transition-all duration-200 group">
-          <span class="font-latin text-xs font-extrabold text-brand-dark tracking-wider block uppercase group-hover:text-white transition-colors">
+        <div class="p-5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1.5 hover:border-brand-dark transition-colors">
+          <span class="font-latin text-xs font-extrabold tracking-wider text-brand-dark block uppercase">
             EXPERTISE
           </span>
-          <span class="font-headline font-bold text-sm text-white block">
+          <span class="font-headline text-sm sm:text-base font-bold text-white block">
             الخبرة والكفاءة
           </span>
         </div>
         
-        <div class="p-4 rounded-xl bg-slate-800/90 border border-slate-700/80 text-center space-y-1.5 hover:border-brand-dark transition-all duration-200 group">
-          <span class="font-latin text-xs font-extrabold text-brand-dark tracking-wider block uppercase group-hover:text-white transition-colors">
+        <div class="p-5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1.5 hover:border-brand-dark transition-colors">
+          <span class="font-latin text-xs font-extrabold tracking-wider text-brand-dark block uppercase">
             QUALITY
           </span>
-          <span class="font-headline font-bold text-sm text-white block">
+          <span class="font-headline text-sm sm:text-base font-bold text-white block">
             الجودة
           </span>
         </div>
         
-        <div class="p-4 rounded-xl bg-slate-800/90 border border-slate-700/80 text-center space-y-1.5 hover:border-brand-dark transition-all duration-200 group">
-          <span class="font-latin text-xs font-extrabold text-brand-dark tracking-wider block uppercase group-hover:text-white transition-colors">
+        <div class="p-5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1.5 hover:border-brand-dark transition-colors">
+          <span class="font-latin text-xs font-extrabold tracking-wider text-brand-dark block uppercase">
             AGILITY
           </span>
-          <span class="font-headline font-bold text-sm text-white block">
+          <span class="font-headline text-sm sm:text-base font-bold text-white block">
             المرونة
           </span>
         </div>
         
-        <div class="p-4 rounded-xl bg-slate-800/90 border border-slate-700/80 text-center space-y-1.5 hover:border-brand-dark transition-all duration-200 group">
-          <span class="font-latin text-xs font-extrabold text-brand-dark tracking-wider block uppercase group-hover:text-white transition-colors">
+        <div class="p-5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1.5 hover:border-brand-dark transition-colors">
+          <span class="font-latin text-xs font-extrabold tracking-wider text-brand-dark block uppercase">
             SUSTAINABILITY
           </span>
-          <span class="font-headline font-bold text-sm text-white block">
+          <span class="font-headline text-sm sm:text-base font-bold text-white block">
             الاستدامة
           </span>
         </div>
         
       </div>
-
     </div>
 
   </div>
@@ -558,71 +572,71 @@
   <section class="py-16 md:py-20 border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       <div class="text-center max-w-2xl mx-auto space-y-3">
-        <span class="text-xs font-accent uppercase tracking-widest text-brand dark:text-brand-dark font-bold">أرقام وإنجازات</span>
+        <span class="text-xs font-accent uppercase tracking-widest text-brand dark:text-brand-dark font-bold">إنجازاتنا بالأرقام</span>
         <h2 class="text-2xl sm:text-3xl font-headline font-extrabold text-slate-900 dark:text-white">
-          أرقام تعكس الالتزام والخبرة
+          أرقام تعكس التزامنا وجودة خدماتنا
         </h2>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         
         <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center shadow-sm hover:border-brand dark:hover:border-brand-dark transition-colors">
-          <span class="text-3xl sm:text-4xl font-extrabold font-latin text-brand dark:text-brand-dark block tracking-tight">
+          <span class="text-3xl sm:text-4xl font-extrabold font-latin text-brand dark:text-brand-dark block tracking-tight" dir="ltr">
             32+
           </span>
           <span class="text-xs sm:text-sm font-headline font-semibold text-slate-700 dark:text-slate-300 block mt-2">
             مشروعاً تمت مرافقتها
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-1 font-body">
-            undefined
+            حلول واقعية ملموسة
           </span>
         </div>
         
         <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center shadow-sm hover:border-brand dark:hover:border-brand-dark transition-colors">
-          <span class="text-3xl sm:text-4xl font-extrabold font-latin text-brand dark:text-brand-dark block tracking-tight">
+          <span class="text-3xl sm:text-4xl font-extrabold font-latin text-brand dark:text-brand-dark block tracking-tight" dir="ltr">
             18
           </span>
           <span class="text-xs sm:text-sm font-headline font-semibold text-slate-700 dark:text-slate-300 block mt-2">
             جامعة وصل إليها نشاط الشركة
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-1 font-body">
-            undefined
+            شبكة علاقات واسعة
           </span>
         </div>
         
         <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center shadow-sm hover:border-brand dark:hover:border-brand-dark transition-colors">
-          <span class="text-3xl sm:text-4xl font-extrabold font-latin text-brand dark:text-brand-dark block tracking-tight">
+          <span class="text-3xl sm:text-4xl font-extrabold font-latin text-brand dark:text-brand-dark block tracking-tight" dir="ltr">
             3
           </span>
           <span class="text-xs sm:text-sm font-headline font-semibold text-slate-700 dark:text-slate-300 block mt-2">
             ملتقيات علمية واقتصادية
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-1 font-body">
-            undefined
+            تنظيم وإشراف متكامل
           </span>
         </div>
         
         <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center shadow-sm hover:border-brand dark:hover:border-brand-dark transition-colors">
-          <span class="text-3xl sm:text-4xl font-extrabold font-latin text-brand dark:text-brand-dark block tracking-tight">
+          <span class="text-3xl sm:text-4xl font-extrabold font-latin text-brand dark:text-brand-dark block tracking-tight" dir="ltr">
             8
           </span>
           <span class="text-xs sm:text-sm font-headline font-semibold text-slate-700 dark:text-slate-300 block mt-2">
             معارض تم الحضور فيها
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-1 font-body">
-            undefined
+            تمثيل ريادي وازن
           </span>
         </div>
         
         <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center shadow-sm hover:border-brand dark:hover:border-brand-dark transition-colors">
-          <span class="text-3xl sm:text-4xl font-extrabold font-latin text-brand dark:text-brand-dark block tracking-tight">
+          <span class="text-3xl sm:text-4xl font-extrabold font-latin text-brand dark:text-brand-dark block tracking-tight" dir="ltr">
             5+
           </span>
           <span class="text-xs sm:text-sm font-headline font-semibold text-slate-700 dark:text-slate-300 block mt-2">
-            مشاريع استفادت للحصول على وسم مشروع مبتكر
+            مشاريع استفادت لوسم مشروع مبتكر
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-1 font-body">
-            undefined
+            تأهيل واعتماد رسمي
           </span>
         </div>
         
@@ -637,7 +651,7 @@
         جاهز لإطلاق مشروعك وتطوير أعمالك؟
       </h2>
       <p class="text-base sm:text-lg text-slate-300 font-body max-w-2xl mx-auto leading-relaxed">
-        فريقنا وخبرتنا في خدمتك عبر باقة متكاملة من الخدمات الموجهة للنجاح والنمو المستدام.
+        فريق YOUR SPACE MAX مستعد لمرافقتك وتقديم الحلول المناسبة لاحتياجاتك بكل احترافية.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4">
         <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-headline font-bold text-base bg-brand-dark hover:bg-blue-600 text-white transition-all shadow-lg hover:shadow-brand-dark/25">
@@ -696,30 +710,18 @@
           LinkedIn
         </span>
       </a>
-
     </div>
 
-    <!-- Main Toggle Action Button -->
-    <button id="socialBubbleToggle" type="button" aria-label="فتح شبكات التواصل الاجتماعي" class="relative group flex items-center justify-center w-14 h-14 rounded-full bg-brand dark:bg-brand-dark text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none">
-      
-      <!-- Subtle Attention Pulse Ring -->
-      <span class="absolute -inset-1 rounded-full bg-brand/30 dark:bg-brand-dark/40 animate-pulse pointer-events-none"></span>
-
-      <!-- Chat / Social Icon (Visible when closed) -->
-      <svg id="bubbleIconChat" class="w-6 h-6 transform transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Main Bubble Floating Trigger Button -->
+    <button id="socialBubbleToggle" type="button" aria-label="فتح قنوات التواصل السريعة" class="w-14 h-14 rounded-full bg-brand hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 text-white shadow-xl hover:shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none ring-4 ring-white/20">
+      <!-- Chat Icon -->
+      <svg id="bubbleIconChat" class="w-6 h-6 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
       </svg>
-
-      <!-- Close (X) Icon (Visible when opened) -->
-      <svg id="bubbleIconClose" class="w-6 h-6 hidden transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- Close Icon -->
+      <svg id="bubbleIconClose" class="w-6 h-6 hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
-
-      <!-- Hover Tooltip -->
-      <span class="pointer-events-none absolute left-full ml-3.5 px-3 py-1.5 rounded-xl bg-slate-900/95 dark:bg-slate-800 text-white text-xs font-headline font-bold shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span>تواصل معنا عبر شبكاتنا</span>
-      </span>
     </button>
   </aside>
   
@@ -751,12 +753,12 @@
           <ul class="space-y-3 text-xs text-slate-400">
             <li class="flex items-start gap-2.5">
               <svg class="w-4 h-4 text-brand-dark shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              <span><strong>المقر:</strong> حاضنة أعمال جامعة قسنطينة 1</span>
+              <span><strong>المقر الرئيسي:</strong> حاضنة أعمال جامعة قسنطينة 1</span>
             </li>
             <li class="flex items-start gap-2.5">
               <svg class="w-4 h-4 text-brand-dark shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               <span>
-                <strong>الهاتف / WhatsApp:</strong><br>
+                <strong>Téléphone / WhatsApp:</strong><br>
                 <a href="tel:+213553182881" class="text-white hover:text-brand-dark transition-colors font-accent" dir="ltr">0553 18 28 81</a>
                 <span class="text-[11px] text-slate-500 block">(خدمة 24/24)</span>
               </span>
@@ -768,11 +770,16 @@
         <div class="space-y-4">
           <h4 class="text-white font-headline font-bold text-base">روابط سريعة</h4>
           <ul class="space-y-2 text-xs font-headline">
+            
             <li><a href="index.html" class="hover:text-brand-dark transition-colors">الرئيسية</a></li>
+            
             <li><a href="about.html" class="hover:text-brand-dark transition-colors">من نحن</a></li>
+            
             <li><a href="services.html" class="hover:text-brand-dark transition-colors">خدماتنا</a></li>
-            <li><a href="index.html#achievements" class="hover:text-brand-dark transition-colors">إنجازاتنا</a></li>
+            
             <li><a href="contact.html" class="hover:text-brand-dark transition-colors">تواصل معنا</a></li>
+            
+            <li><a href="index.html#achievements" class="hover:text-brand-dark transition-colors">إنجازاتنا</a></li>
           </ul>
         </div>
 
@@ -810,9 +817,22 @@
 
       <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
         <p>جميع الحقوق محفوظة © 2026 YOUR SPACE MAX.</p>
-        <p class="font-latin">Designed according to official brand guidelines.</p>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 font-headline">
+            <span class="text-slate-400">اللغة:</span>
+            <a href="index.html" class="text-brand-dark font-bold">العربية</a>
+            <span class="text-slate-700">|</span>
+            <a href="fr/index.html" class="hover:text-white">Français</a>
+          </div>
+          <span class="hidden sm:inline text-slate-700">•</span>
+          <p class="font-latin">Designed according to official brand guidelines.</p>
+        </div>
       </div>
     </div>
   </footer>
   
-  
+
+  <!-- Client-side Modular Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

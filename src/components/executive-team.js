@@ -1,11 +1,15 @@
 /**
  * Executive Management & Team Component
  * Highlights Founder & CEO (FILALI SARA), the Expert Network, and Core Methodology Values
+ * Bilingual Support (Arabic & French)
  */
-const data = require('../data/site-data');
+const { getSiteData } = require('../data/site-data');
 
-module.exports = function renderExecutiveTeam() {
-  const { executive, team, values } = data;
+module.exports = function renderExecutiveTeam(lang = 'ar') {
+  const data = getSiteData(lang);
+  const { executive, team, values, ui } = data;
+  const isFrench = lang === 'fr';
+  const basePath = isFrench ? '../' : '';
 
   return `
   <!-- ========================================================================= -->
@@ -16,13 +20,13 @@ module.exports = function renderExecutiveTeam() {
     <!-- Section Sub-Header -->
     <div class="text-center max-w-3xl mx-auto space-y-3">
       <span class="text-xs font-accent uppercase tracking-widest text-brand dark:text-brand-dark font-bold block">
-        القيادة والكفاءات
+        ${executive.sectionBadge}
       </span>
       <h3 class="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-slate-900 dark:text-white">
-        الإدارة التنفيذية والفريق
+        ${executive.sectionTitle}
       </h3>
       <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-body leading-relaxed">
-        رؤية استراتيجية طموحة تجمع بين الخبرة القانونية والإدارية والتكنولوجية، مدعومة بنخبة من الخبراء والمتخصصين.
+        ${executive.sectionDesc}
       </p>
     </div>
 
@@ -32,7 +36,7 @@ module.exports = function renderExecutiveTeam() {
       <!-- Ambient Background Glow -->
       <div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-brand/5 dark:bg-brand-dark/10 blur-3xl pointer-events-none"></div>
 
-      <!-- Main Two-Column Layout: Big Wide Portrait at the Beginning (Right in RTL) + Full Bio on the Other Side -->
+      <!-- Main Two-Column Layout: Big Wide Portrait at the Beginning (Right in RTL, Left in LTR) + Full Bio on the Other Side -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
         
         <!-- Column 1: Big Wide Portrait & Identity & Socials (lg:col-span-5) -->
@@ -40,18 +44,18 @@ module.exports = function renderExecutiveTeam() {
           
           <!-- Big Wide Portrait Photo -->
           <div class="relative group rounded-3xl overflow-hidden shadow-2xl border-2 border-brand/20 dark:border-brand-dark/30 bg-slate-100 dark:bg-slate-800 aspect-square sm:aspect-[4/5] lg:aspect-square w-full">
-            <img src="assets/images/about-me.jpg" alt="FILALI SARA | فيلالي سارة - Founder & CEO" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+            <img src="${basePath}assets/images/about-me.jpg" alt="${executive.nameEn} - Founder & CEO" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
             
             <!-- Floating Overlay Badge at bottom -->
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-transparent p-5 sm:p-6 text-white flex flex-col justify-end">
               <span class="inline-flex self-start px-3 py-1 rounded-full bg-brand/90 dark:bg-brand-dark/90 text-white font-headline text-xs font-bold shadow-md mb-2">
-                مؤسسة ومديرة تنفيذية
+                ${executive.badge}
               </span>
               <h4 class="text-xl sm:text-2xl font-headline font-extrabold tracking-tight text-white leading-tight">
-                فيلالي سارة
+                ${isFrench ? executive.nameEn : executive.nameAr}
               </h4>
               <p class="font-latin text-xs sm:text-sm text-slate-300 font-semibold tracking-wide mt-0.5">
-                FILALI SARA • Founder & CEO
+                ${isFrench ? `${executive.nameEn} • Fondatrice & CEO` : `${executive.nameEn} • Founder & CEO`}
               </p>
             </div>
           </div>
@@ -59,7 +63,7 @@ module.exports = function renderExecutiveTeam() {
           <!-- Social Media & Direct Connect Box -->
           <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-3">
             <span class="text-xs font-headline font-bold text-slate-700 dark:text-slate-300 block">
-              الحسابات المهنية والتواصل المباشر:
+              ${ui.executiveSocialsTitle}
             </span>
             <div class="grid grid-cols-2 gap-2.5">
               <!-- LinkedIn -->
@@ -92,10 +96,10 @@ module.exports = function renderExecutiveTeam() {
           
           <div class="space-y-2">
             <span class="px-3 py-1 rounded-full bg-brand/10 dark:bg-brand-dark/20 text-brand dark:text-brand-dark font-headline text-xs font-bold inline-block">
-              النبذة المهنية والأكاديمية
+              ${executive.bioHeading}
             </span>
             <h4 class="text-2xl sm:text-3xl font-headline font-extrabold text-slate-900 dark:text-white">
-              المسار والخبرات القيادية
+              ${executive.bioSubheading}
             </h4>
           </div>
 
@@ -115,9 +119,9 @@ module.exports = function renderExecutiveTeam() {
           </div>
 
           <!-- Professional Vision Quote Box -->
-          <div class="p-6 rounded-2xl bg-gradient-to-r from-brand/5 via-blue-50/50 to-transparent dark:from-brand-dark/10 dark:via-slate-800/60 dark:to-transparent border-r-4 border-brand dark:border-brand-dark border border-slate-200 dark:border-slate-800 space-y-2 shadow-xs">
+          <div class="p-6 rounded-2xl bg-gradient-to-r from-brand/5 via-blue-50/50 to-transparent dark:from-brand-dark/10 dark:via-slate-800/60 dark:to-transparent ${isFrench ? 'border-l-4' : 'border-r-4'} border-brand dark:border-brand-dark border border-slate-200 dark:border-slate-800 space-y-2 shadow-xs">
             <span class="font-headline font-bold text-xs uppercase tracking-wider text-brand dark:text-brand-dark block">
-              الرؤية المهنية:
+              ${executive.visionTitle}
             </span>
             <blockquote class="text-sm sm:text-base text-slate-800 dark:text-slate-200 font-body leading-relaxed italic">
               «${executive.vision}»
@@ -135,7 +139,7 @@ module.exports = function renderExecutiveTeam() {
       
       <div class="text-center max-w-3xl mx-auto space-y-3">
         <h4 class="text-xl sm:text-2xl font-headline font-bold text-slate-900 dark:text-white">
-          فريق العمل وشبكة الكفاءات
+          ${team.title}
         </h4>
         <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-body leading-relaxed">
           ${team.intro}
@@ -163,38 +167,31 @@ module.exports = function renderExecutiveTeam() {
 
     </div>
 
-    <!-- 3. رؤيتنا ومنهجية عملنا (Our Vision & Core Methodology Values) -->
-    <div class="p-8 sm:p-10 rounded-3xl bg-slate-900 text-white space-y-6">
-      
+    <!-- 3. رؤيتنا ومنهجية عملنا (5 Core Methodology Values) -->
+    <div class="p-8 sm:p-10 rounded-3xl bg-slate-900 text-white space-y-8 border border-slate-800">
       <div class="text-center max-w-2xl mx-auto space-y-2">
-        <span class="text-xs font-accent uppercase tracking-widest text-brand-dark font-bold block">
-          ركائز التميز
+        <span class="text-xs font-latin uppercase tracking-widest text-brand-dark font-bold block">
+          OUR VALUES • OUR PILLARS
         </span>
-        <h4 class="text-xl sm:text-2xl font-headline font-extrabold text-white">
-          رؤيتنا ومنهجية عملنا
+        <h4 class="text-2xl sm:text-3xl font-headline font-extrabold text-white">
+          ${data.valuesTitle}
         </h4>
-        <p class="text-xs sm:text-sm text-slate-300 font-body">
-          قيم حاكمة ترشد مسارنا وتضمن تحقيق أفضل أثر مستدام لمشاريع شركائنا.
-        </p>
       </div>
 
-      <!-- Values Cards Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 pt-2">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
         ${values.map(val => `
-        <div class="p-4 rounded-xl bg-slate-800/90 border border-slate-700/80 text-center space-y-1.5 hover:border-brand-dark transition-all duration-200 group">
-          <span class="font-latin text-xs font-extrabold text-brand-dark tracking-wider block uppercase group-hover:text-white transition-colors">
+        <div class="p-5 rounded-2xl bg-slate-800/80 border border-slate-700/60 text-center space-y-1.5 hover:border-brand-dark transition-colors">
+          <span class="font-latin text-xs font-extrabold tracking-wider text-brand-dark block uppercase">
             ${val.en}
           </span>
-          <span class="font-headline font-bold text-sm text-white block">
-            ${val.ar}
+          <span class="font-headline text-sm sm:text-base font-bold text-white block">
+            ${val.label || val.ar}
           </span>
         </div>
         `).join('')}
       </div>
-
     </div>
 
   </div>
   `;
 };
-

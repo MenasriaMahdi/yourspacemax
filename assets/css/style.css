@@ -27,6 +27,20 @@ h1, h2, h3, h4, h5, h6,
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* Multilingual Typography Support: French (LTR) automatically uses Plus Jakarta Sans */
+html[lang="fr"] body,
+html[lang="fr"] h1, 
+html[lang="fr"] h2, 
+html[lang="fr"] h3, 
+html[lang="fr"] h4, 
+html[lang="fr"] h5, 
+html[lang="fr"] h6,
+html[lang="fr"] .font-headline, 
+html[lang="fr"] .font-body, 
+html[lang="fr"] .font-accent {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
 /* Custom Scrollbar for Sleek Corporate Look */
 ::-webkit-scrollbar {
   width: 8px;

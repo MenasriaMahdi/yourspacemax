@@ -1,13 +1,22 @@
 /**
  * Automated Verification & Link Integrity Checker for YOUR SPACE MAX
- * Validates links, anchor hashes, query parameters, JavaScript files, and images
+ * Validates links, anchor hashes, query parameters, JavaScript files, and images across Arabic and French pages
  */
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
 const rootDir = path.resolve(__dirname, '..');
-const pages = ['index.html', 'about.html', 'services.html', 'contact.html'];
+const pages = [
+  'index.html',
+  'about.html',
+  'services.html',
+  'contact.html',
+  'fr/index.html',
+  'fr/about.html',
+  'fr/services.html',
+  'fr/contact.html'
+];
 const pageContents = {};
 const pageIds = {};
 
@@ -20,6 +29,11 @@ console.log('========================================');
 // Load pages & parse IDs
 pages.forEach(p => {
   const filePath = path.join(rootDir, p);
+  if (!fs.existsSync(filePath)) {
+    console.error(`  [X] Page missing from build: ${p}`);
+    totalErrors++;
+    return;
+  }
   const content = fs.readFileSync(filePath, 'utf8');
   pageContents[p] = content;
   const idMatches = content.match(/\bid=["']([^"']+)["']/g) || [];
@@ -29,6 +43,9 @@ pages.forEach(p => {
 pages.forEach(sourcePage => {
   console.log(`Checking ${sourcePage} ...`);
   const content = pageContents[sourcePage];
+  if (!content) return;
+
+  const sourceDir = path.dirname(path.join(rootDir, sourcePage));
   const aMatches = [...content.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)];
 
   aMatches.forEach((m, idx) => {
@@ -41,20 +58,20 @@ pages.forEach(sourcePage => {
     }
 
     let [filePart, rest] = href.split(/[?#]/);
-    let targetPage = filePart ? filePart : sourcePage;
+    let targetFullPath = filePart ? path.resolve(sourceDir, filePart) : path.join(rootDir, sourcePage);
+    let targetRelative = path.relative(rootDir, targetFullPath).replace(/\\/g, '/');
     let targetHash = href.includes('#') ? href.split('#')[1] : null;
 
-    const targetFullPath = path.join(rootDir, targetPage);
     if (!fs.existsSync(targetFullPath)) {
-      console.error(`  [X] Broken Link: "${text}" points to missing file "${targetPage}"`);
+      console.error(`  [X] Broken Link in ${sourcePage}: "${text}" points to missing file "${filePart}" (resolved: ${targetRelative})`);
       totalErrors++;
       return;
     }
 
     if (targetHash) {
-      const targetIdSet = pageIds[targetPage];
+      const targetIdSet = pageIds[targetRelative];
       if (!targetIdSet || !targetIdSet.has(targetHash)) {
-        console.error(`  [X] Broken Anchor: "${text}" points to missing #${targetHash} in "${targetPage}"`);
+        console.error(`  [X] Broken Anchor in ${sourcePage}: "${text}" points to missing #${targetHash} in "${targetRelative}"`);
         totalErrors++;
         return;
       }
@@ -86,28 +103,28 @@ console.log('\n========================================');
 console.log('3. VALIDATING IMAGE ASSETS EXISTENCE');
 console.log('========================================');
 
-const imgDir = path.join(rootDir, 'assets', 'images');
 pages.forEach(p => {
   const content = pageContents[p];
+  if (!content) return;
+  const sourceDir = path.dirname(path.join(rootDir, p));
   const imgMatches = [...content.matchAll(/<img\b[^>]*src=["']([^"']+)["']/gi)];
   imgMatches.forEach(m => {
     const imgSrc = m[1];
     const cleanSrc = imgSrc.split(/[?#]/)[0];
-    const fullImgPath = path.join(rootDir, cleanSrc);
+    const fullImgPath = path.resolve(sourceDir, cleanSrc);
     if (!fs.existsSync(fullImgPath)) {
-      console.error(`  [X] Missing Image in ${p}: ${imgSrc}`);
+      console.error(`  [X] Missing Image in ${p}: ${imgSrc} (resolved: ${fullImgPath})`);
       totalErrors++;
     }
   });
 });
-console.log(`  ✓ All referenced images exist in assets/images/`);
+console.log(`  ✓ All referenced images exist across Arabic and French pages`);
 
 console.log('\n========================================');
 if (totalErrors === 0) {
-  console.log('ALL INTEGRITY CHECKS PASSED (100% SUCCESS)!');
+  console.log('ALL INTEGRITY CHECKS PASSED (100% SUCCESS ACROSS ARABIC & FRENCH)!');
 } else {
   console.error(`FAILED: ${totalErrors} issue(s) detected.`);
   process.exit(1);
 }
 console.log('========================================');
-
