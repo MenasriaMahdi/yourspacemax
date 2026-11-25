@@ -14,7 +14,7 @@ module.exports = function renderFooter() {
         <div class="space-y-4">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-full bg-white border border-slate-200 dark:border-slate-700 p-0 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
-              <img src="assets/images/logo.png" alt="${data.brand.name} Logo" class="w-full h-full object-cover">
+              <img src="assets/images/logo.png" alt="${data.brand.name} Logo" class="w-full h-full object-cover scale-105">
             </div>
             <div>
               <span class="text-xl font-bold font-latin text-white block tracking-tight">${data.brand.name}</span>

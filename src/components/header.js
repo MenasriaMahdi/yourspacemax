@@ -12,7 +12,7 @@ module.exports = function renderHeader(activePage = 'home') {
       <!-- Brand Logo & Name: YOUR SPACE MAX -->
       <a href="index.html" class="flex items-center gap-3.5 group">
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border border-slate-200 dark:border-slate-700/80 p-0 flex items-center justify-center shrink-0 overflow-hidden transition-all duration-300 group-hover:scale-105 shadow-sm group-hover:shadow-md">
-          <img src="assets/images/logo.png" alt="${data.brand.name} Logo" class="w-full h-full object-cover">
+          <img src="assets/images/logo.png" alt="${data.brand.name} Logo" class="w-full h-full object-cover scale-105">
         </div>
         <div class="space-y-0.5">
           <span class="text-xl sm:text-2xl font-bold font-latin tracking-tight text-slate-900 dark:text-white block leading-tight">${data.brand.name}</span>
