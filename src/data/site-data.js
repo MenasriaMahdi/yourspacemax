@@ -15,7 +15,14 @@ module.exports = {
     phoneAvailability: 'خدمة 24/24',
     phoneTel: '+213553182881',
     whatsappUrl: 'https://wa.me/213553182881',
-    copyright: 'جميع الحقوق محفوظة © 2026 YOUR SPACE MAX.'
+    copyright: 'جميع الحقوق محفوظة © 2026 YOUR SPACE MAX.',
+    socials: {
+      facebook: 'https://www.facebook.com/share/1CLjPitu7C/',
+      instagram: 'https://www.instagram.com/yourspace.max?gwpx=Zmg3ajZqN3JuOGgw',
+      tiktok: 'https://www.tiktok.com/@yourspace.max?_r=1&_t=ZS-9BgKbaSO8oP',
+      linkedin: 'https://www.linkedin.com/company/your-space.startup?trk=public_profile_topcard-current-company',
+      whatsapp: 'https://wa.me/213553182881'
+    }
   },
 
   navigation: [

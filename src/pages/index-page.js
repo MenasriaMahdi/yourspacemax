@@ -6,6 +6,7 @@ const renderHead = require('../components/head');
 const renderHeader = require('../components/header');
 const renderFooter = require('../components/footer');
 const renderSideNav = require('../components/side-nav');
+const renderSocialBubble = require('../components/social-bubble');
 const data = require('../data/site-data');
 
 module.exports = function renderIndexPage() {
@@ -18,6 +19,7 @@ module.exports = function renderIndexPage() {
   const header = renderHeader('home');
   const footer = renderFooter();
   const sideNav = renderSideNav();
+  const socialBubble = renderSocialBubble();
 
   return `${head}
   ${header}
@@ -234,6 +236,7 @@ module.exports = function renderIndexPage() {
     </div>
   </section>
 
+  ${socialBubble}
   ${footer}
 
   <!-- Client-side Modular Scripts -->
