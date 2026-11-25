@@ -7,6 +7,7 @@ const renderHeader = require('../components/header');
 const renderFooter = require('../components/footer');
 const renderSideNav = require('../components/side-nav');
 const renderSocialBubble = require('../components/social-bubble');
+const renderExecutiveTeam = require('../components/executive-team');
 const data = require('../data/site-data');
 
 module.exports = function renderIndexPage() {
@@ -20,6 +21,7 @@ module.exports = function renderIndexPage() {
   const footer = renderFooter();
   const sideNav = renderSideNav();
   const socialBubble = renderSocialBubble();
+  const executiveTeam = renderExecutiveTeam();
 
   return `${head}
   ${header}
@@ -145,6 +147,9 @@ module.exports = function renderIndexPage() {
           </p>
         </div>
       </div>
+
+      <!-- الإدارة التنفيذية والفريق ورؤيتنا -->
+      ${executiveTeam}
 
     </div>
   </section>

@@ -12,10 +12,10 @@ module.exports = function renderSideNav() {
         01 • الواجهة الرئيسية
       </span>
     </a>
-    <a href="#about" data-section="about" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="من نحن والمحطات" title="من نحن والمحطات">
+    <a href="#about" data-section="about" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="من نحن والفريق" title="من نحن والفريق">
       <span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 transition-all duration-300 indicator-dot"></span>
       <span class="pointer-events-none absolute right-11 px-2.5 py-1 rounded-lg bg-slate-900 dark:bg-slate-800 text-white text-xs font-headline font-semibold shadow-md whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
-        02 • من نحن والمحطات
+        02 • من نحن وفريقنا
       </span>
     </a>
     <a href="#services" data-section="services" class="side-nav-item group relative flex items-center justify-center w-8 h-8 rounded-xl transition-all" aria-label="خدماتنا" title="خدماتنا">
