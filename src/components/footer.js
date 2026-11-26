@@ -97,9 +97,9 @@ module.exports = function renderFooter(lang = 'ar') {
         <div class="flex items-center gap-4">
           <div class="flex items-center gap-2 font-headline">
             <span class="text-slate-400">${isFrench ? 'Langue :' : 'اللغة:'}</span>
-            <a href="${isFrench ? '../index.html' : 'index.html'}" class="${!isFrench ? 'text-brand-dark font-bold' : 'hover:text-white'}">العربية</a>
+            <a href="${isFrench ? '../index.html' : 'index.html'}" data-switch-lang="ar" class="${!isFrench ? 'text-brand-dark font-bold' : 'hover:text-white'}">العربية</a>
             <span class="text-slate-700">|</span>
-            <a href="${isFrench ? 'index.html' : 'fr/index.html'}" class="${isFrench ? 'text-brand-dark font-bold' : 'hover:text-white'}">Français</a>
+            <a href="${isFrench ? 'index.html' : 'fr/index.html'}" data-switch-lang="fr" class="${isFrench ? 'text-brand-dark font-bold' : 'hover:text-white'}">Français</a>
           </div>
           <span class="hidden sm:inline text-slate-700">•</span>
           <p class="font-latin">${data.ui.designedAccording}</p>

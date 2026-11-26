@@ -26,6 +26,31 @@ module.exports = function renderHead({ title, description, activePage = '', lang
 
   <!-- Immediate Theme Initializer (prevents theme flickering) -->
   <script src="${basePath}assets/js/theme.js"></script>
+
+  <!-- Immediate Language Preference Resolver (prevents language flashing) -->
+  <script>
+    (function() {
+      try {
+        var savedLang = localStorage.getItem('youspace_lang');
+        var path = window.location.pathname;
+        var isFr = path.indexOf('/fr/') !== -1;
+        
+        // If user explicitly chose French and lands on root (Arabic) page
+        if (savedLang === 'fr' && !isFr) {
+          var base = path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1);
+          var file = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+          if (!file.endsWith('.html')) file = 'index.html';
+          window.location.replace(base + 'fr/' + file);
+        }
+        // If user explicitly chose Arabic and lands on /fr/ page
+        else if (savedLang === 'ar' && isFr) {
+          var file = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+          if (!file.endsWith('.html')) file = 'index.html';
+          window.location.replace('../' + file);
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-body antialiased transition-colors selection:bg-brand selection:text-white">
 `;

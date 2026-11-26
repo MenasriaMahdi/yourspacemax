@@ -39,7 +39,7 @@ module.exports = function renderHeader(activePage = 'home', lang = 'ar') {
       <div class="flex items-center gap-2.5 sm:gap-3.5">
         
         <!-- Language Switcher Pill -->
-        <a href="${switchLangUrl}" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-brand dark:hover:text-brand-dark hover:border-brand/40 text-xs font-bold transition-all shadow-xs" title="${data.ui.otherLangTitle}" aria-label="${data.ui.otherLangTitle}">
+        <a href="${switchLangUrl}" data-switch-lang="${isFrench ? 'ar' : 'fr'}" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-brand dark:hover:text-brand-dark hover:border-brand/40 text-xs font-bold transition-all shadow-xs" title="${data.ui.otherLangTitle}" aria-label="${data.ui.otherLangTitle}">
           <svg class="w-4 h-4 text-brand dark:text-brand-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
           <span class="${isFrench ? 'font-headline' : 'font-latin'}">${data.ui.otherLangLabel}</span>
         </a>
@@ -76,7 +76,7 @@ module.exports = function renderHeader(activePage = 'home', lang = 'ar') {
         `).join('')}
       </div>
       <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3">
-        <a href="${switchLangUrl}" class="flex-1 text-center py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold text-xs flex items-center justify-center gap-2">
+        <a href="${switchLangUrl}" data-switch-lang="${isFrench ? 'ar' : 'fr'}" class="flex-1 text-center py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold text-xs flex items-center justify-center gap-2">
           <svg class="w-4 h-4 text-brand dark:text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
           <span>${data.ui.otherLangTitle}</span>
         </a>
