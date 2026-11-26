@@ -17,6 +17,7 @@ module.exports = {
     phoneAvailability: 'خدمة 24/24',
     phoneTel: '+213553182881',
     whatsappUrl: 'https://wa.me/213553182881',
+    contactEmail: 'filalisara29@gmail.com',
     copyright: 'جميع الحقوق محفوظة © 2026 YOUR SPACE MAX.',
     socials: {
       facebook: 'https://www.facebook.com/share/1CLjPitu7C/',

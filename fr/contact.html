@@ -132,7 +132,7 @@
             <p class="text-sm text-slate-600 dark:text-slate-400 font-body">Veuillez renseigner les informations ci-dessous. Notre équipe vous recontactera sous 24h ouvrées.</p>
           </div>
 
-          <!-- Success Alert Message (Shown via contact.js) -->
+          <!-- Success Alert Message (Shown on real dispatch) -->
           <div id="formSuccess" class="hidden p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-sm font-headline">
             <div class="flex items-center gap-3">
               <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -140,36 +140,51 @@
             </div>
           </div>
 
+          <!-- Error Alert Message -->
+          <div id="formError" class="hidden p-4 rounded-xl bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800 text-rose-800 dark:text-rose-300 text-sm font-headline space-y-2">
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-rose-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              <div>
+                <p id="formErrorMessage">Une erreur est survenue lors de l’envoi. Vous pouvez également nous contacter directement via WhatsApp ci-dessous.</p>
+              </div>
+            </div>
+          </div>
+
           <form id="contactForm" class="space-y-5 font-body">
+            
+            <!-- Hidden configuration for FormSubmit -->
+            <input type="hidden" id="recipientEmail" value="filalisara29@gmail.com">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
             
             <!-- Full Name -->
             <div class="space-y-1.5">
               <label for="fullName" class="block text-sm font-headline font-semibold text-slate-800 dark:text-slate-200">Nom et Prénom *</label>
-              <input type="text" id="fullName" required class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="Ex : Mohamed Benali">
+              <input type="text" id="fullName" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="Ex : Mohamed Benali">
             </div>
 
             <!-- Entity / Project Name -->
             <div class="space-y-1.5">
               <label for="entityRole" class="block text-sm font-headline font-semibold text-slate-800 dark:text-slate-200">Statut / Nom du projet ou de l’entreprise</label>
-              <input type="text" id="entityRole" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="Ex : Porteur de projet / Startup / PME">
+              <input type="text" id="entityRole" name="entity_role" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="Ex : Porteur de projet / Startup / PME">
             </div>
 
             <!-- Phone & Email Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="space-y-1.5">
                 <label for="phone" class="block text-sm font-headline font-semibold text-slate-800 dark:text-slate-200">Numéro de Téléphone *</label>
-                <input type="tel" id="phone" required dir="ltr" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all text-left" placeholder="0550 00 00 00">
+                <input type="tel" id="phone" name="phone" required dir="ltr" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all text-left" placeholder="0550 00 00 00">
               </div>
               <div class="space-y-1.5">
                 <label for="email" class="block text-sm font-headline font-semibold text-slate-800 dark:text-slate-200">Adresse Email *</label>
-                <input type="email" id="email" required dir="ltr" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all text-left" placeholder="nom@entreprise.com">
+                <input type="email" id="email" name="email" required dir="ltr" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all text-left" placeholder="nom@entreprise.com">
               </div>
             </div>
 
             <!-- Service Selection -->
             <div class="space-y-1.5">
               <label for="serviceSelect" class="block text-sm font-headline font-semibold text-slate-800 dark:text-slate-200">Service souhaité *</label>
-              <select id="serviceSelect" required class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all">
+              <select id="serviceSelect" name="service" required class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all">
                 <option value="">Sélectionnez le service approprié...</option>
                 
                 <option value="service-1">1. Incubateur & Accélérateur de Startups</option>
@@ -191,7 +206,7 @@
             <!-- Accompaniment Type -->
             <div class="space-y-1.5">
               <label for="accompanimentType" class="block text-sm font-headline font-semibold text-slate-800 dark:text-slate-200">Format d'accompagnement souhaité</label>
-              <select id="accompanimentType" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all">
+              <select id="accompanimentType" name="accompaniment_type" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all">
                 <option value="inPerson">En présentiel</option>
                 <option value="remote">À distance (En ligne)</option>
                 <option value="hybrid">Format hybride (Présentiel & En ligne)</option>
@@ -201,13 +216,26 @@
             <!-- Message / Notes -->
             <div class="space-y-1.5">
               <label for="message" class="block text-sm font-headline font-semibold text-slate-800 dark:text-slate-200">Détails de votre projet ou demande *</label>
-              <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all resize-y" placeholder="Décrivez brièvement votre projet, vos objectifs ou le type de conseil recherché..."></textarea>
+              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-brand dark:focus:border-brand-dark focus:ring-1 focus:ring-brand outline-none transition-all resize-y" placeholder="Décrivez brièvement votre projet, vos objectifs ou le type de conseil recherché..."></textarea>
             </div>
 
-            <!-- Submit Button -->
-            <button type="submit" class="w-full py-4 rounded-lg font-headline font-bold text-base bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
-              Envoyer ma demande
-            </button>
+            <!-- Buttons: Send Real Email OR Direct WhatsApp -->
+            <div class="space-y-3 pt-2">
+              <button type="submit" id="submitBtn" class="w-full py-4 rounded-lg font-headline font-bold text-base bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-all shadow-sm flex items-center justify-center gap-2">
+                <span id="submitBtnText">Envoyer ma demande</span>
+              </button>
+
+              <div class="relative flex py-1 items-center">
+                <div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+                <span class="flex-shrink mx-4 text-xs text-slate-400 font-headline">ou via WhatsApp</span>
+                <div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+              </div>
+
+              <button type="button" id="whatsappSubmitBtn" class="w-full py-3.5 rounded-lg font-headline font-semibold text-sm bg-emerald-600 hover:bg-emerald-700 text-white transition-all shadow-sm flex items-center justify-center gap-2.5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Transmettre les données sur WhatsApp</span>
+              </button>
+            </div>
           </form>
         </div>
 
