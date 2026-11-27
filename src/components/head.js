@@ -25,32 +25,23 @@ module.exports = function renderHead({ title, description, activePage = '', lang
   <script src="${basePath}assets/js/tailwind.config.js"></script>
 
   <!-- Immediate Theme Initializer (prevents theme flickering) -->
-  <script src="${basePath}assets/js/theme.js"></script>
+  <script src="${basePath}assets/js/theme.js"></script>${!isFrench ? `
 
-  <!-- Immediate Language Preference Resolver (prevents language flashing) -->
+  <!-- Language Preference Resolver (Only runs on Arabic root to honor French preference) -->
   <script>
     (function() {
       try {
         var savedLang = localStorage.getItem('youspace_lang');
-        var path = window.location.pathname;
-        var isFr = path.indexOf('/fr/') !== -1;
-        
-        // If user explicitly chose French and lands on root (Arabic) page
-        if (savedLang === 'fr' && !isFr) {
-          var base = path.endsWith('/') ? path : path.substring(0, path.lastIndexOf('/') + 1);
-          var file = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
-          if (!file.endsWith('.html')) file = 'index.html';
-          window.location.replace(base + 'fr/' + file);
-        }
-        // If user explicitly chose Arabic and lands on /fr/ page
-        else if (savedLang === 'ar' && isFr) {
-          var file = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
-          if (!file.endsWith('.html')) file = 'index.html';
-          window.location.replace('../' + file);
+        if (savedLang === 'fr') {
+          var path = window.location.pathname;
+          var isHome = path === '/' || path === '' || path.endsWith('/index.html') || path.endsWith('/index');
+          if (isHome) {
+            window.location.replace('fr/index.html');
+          }
         }
       } catch (e) {}
     })();
-  </script>
+  </script>` : ''}
 </head>
 <body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-body antialiased transition-colors selection:bg-brand selection:text-white">
 `;
