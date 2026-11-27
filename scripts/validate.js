@@ -58,7 +58,16 @@ pages.forEach(sourcePage => {
     }
 
     let [filePart, rest] = href.split(/[?#]/);
-    let targetFullPath = filePart ? path.resolve(sourceDir, filePart) : path.join(rootDir, sourcePage);
+    let targetFullPath;
+    if (filePart) {
+      if (filePart.startsWith('/')) {
+        targetFullPath = path.join(rootDir, filePart.slice(1));
+      } else {
+        targetFullPath = path.resolve(sourceDir, filePart);
+      }
+    } else {
+      targetFullPath = path.join(rootDir, sourcePage);
+    }
     let targetRelative = path.relative(rootDir, targetFullPath).replace(/\\/g, '/');
     let targetHash = href.includes('#') ? href.split('#')[1] : null;
 

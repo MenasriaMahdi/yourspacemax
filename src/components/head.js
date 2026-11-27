@@ -34,9 +34,9 @@ module.exports = function renderHead({ title, description, activePage = '', lang
         var savedLang = localStorage.getItem('youspace_lang');
         if (savedLang === 'fr') {
           var path = window.location.pathname;
-          var isHome = path === '/' || path === '' || path.endsWith('/index.html') || path.endsWith('/index');
+          var isHome = path === '/' || path === '' || path === '/index.html' || path === '/index';
           if (isHome) {
-            window.location.replace('fr/index.html');
+            window.location.replace('/fr/index.html');
           }
         }
       } catch (e) {}

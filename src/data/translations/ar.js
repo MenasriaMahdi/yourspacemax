@@ -28,10 +28,10 @@ module.exports = {
     }
   },
   navigation: [
-    { id: 'home', label: 'الرئيسية', url: 'index.html' },
-    { id: 'about', label: 'من نحن', url: 'about.html' },
-    { id: 'services', label: 'خدماتنا', url: 'services.html' },
-    { id: 'contact', label: 'تواصل معنا', url: 'contact.html' }
+    { id: 'home', label: 'الرئيسية', url: '/index.html' },
+    { id: 'about', label: 'من نحن', url: '/about.html' },
+    { id: 'services', label: 'خدماتنا', url: '/services.html' },
+    { id: 'contact', label: 'تواصل معنا', url: '/contact.html' }
   ],
   timeline: [
     {

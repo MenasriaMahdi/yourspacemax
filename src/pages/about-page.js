@@ -15,6 +15,7 @@ module.exports = function renderAboutPage(lang = 'ar') {
   const data = getSiteData(lang);
   const isFrench = lang === 'fr';
   const basePath = isFrench ? '../' : '';
+  const langPrefix = isFrench ? '/fr/' : '/';
 
   const head = renderHead({
     title: isFrench 
@@ -166,10 +167,10 @@ module.exports = function renderAboutPage(lang = 'ar') {
         ${data.ui.ctaSectionDesc}
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4">
-        <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-headline font-bold text-base bg-brand-dark hover:bg-blue-600 text-white transition-all shadow-lg hover:shadow-brand-dark/25">
+        <a href="${langPrefix}contact.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-headline font-bold text-base bg-brand-dark hover:bg-blue-600 text-white transition-all shadow-lg hover:shadow-brand-dark/25">
           ${data.ui.ctaSectionBtnStart}
         </a>
-        <a href="services.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-headline font-semibold text-base border border-slate-700 hover:bg-slate-800 text-white transition-all">
+        <a href="${langPrefix}services.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-headline font-semibold text-base border border-slate-700 hover:bg-slate-800 text-white transition-all">
           ${data.ui.ctaSectionBtnServices}
         </a>
       </div>

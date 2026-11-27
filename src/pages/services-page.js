@@ -13,6 +13,7 @@ module.exports = function renderServicesPage(lang = 'ar') {
   const data = getSiteData(lang);
   const isFrench = lang === 'fr';
   const basePath = isFrench ? '../' : '';
+  const langPrefix = isFrench ? '/fr/' : '/';
 
   const head = renderHead({
     title: isFrench 
@@ -90,7 +91,7 @@ module.exports = function renderServicesPage(lang = 'ar') {
 
           <!-- Direct Request Button with URL parameter auto-fill -->
           <div class="pt-2">
-            <a href="contact.html?service=${service.id}" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-headline font-bold text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
+            <a href="${langPrefix}contact.html?service=${service.id}" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-headline font-bold text-sm bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
               ${isFrench ? 'Demander ce service' : 'اطلب هذه الخدمة'}
             </a>
           </div>
@@ -135,7 +136,7 @@ module.exports = function renderServicesPage(lang = 'ar') {
               <td class="py-3.5 px-4 font-headline font-bold text-slate-900 dark:text-white">${s.title}</td>
               <td class="py-3.5 px-4">${s.target}</td>
               <td class="py-3.5 px-4 text-center">
-                <a href="contact.html?service=${s.id}" class="text-brand dark:text-brand-dark font-headline font-bold hover:underline">
+                <a href="${langPrefix}contact.html?service=${s.id}" class="text-brand dark:text-brand-dark font-headline font-bold hover:underline">
                   ${isFrench ? 'Demander' : 'طلب'}
                 </a>
               </td>
@@ -153,7 +154,7 @@ module.exports = function renderServicesPage(lang = 'ar') {
       <h3 class="text-2xl sm:text-3xl font-headline font-bold">${isFrench ? 'Prêt à lancer votre projet ?' : 'جاهز للانطلاق بمشروعك؟'}</h3>
       <p class="text-sm sm:text-base text-slate-300 font-body">${isFrench ? 'Notre équipe d’experts est à votre disposition pour concevoir l’accompagnement idéal pour vos ambitions.' : 'فريق خبرائنا جاهز لمرافقتك وتخصيص الباقة الأنسب لأهدافك.'}</p>
       <div class="flex flex-wrap justify-center gap-4 pt-2">
-        <a href="contact.html" class="px-7 py-3 rounded-lg font-headline font-bold text-sm bg-brand-dark text-white hover:bg-blue-600 transition-colors">
+        <a href="${langPrefix}contact.html" class="px-7 py-3 rounded-lg font-headline font-bold text-sm bg-brand-dark text-white hover:bg-blue-600 transition-colors">
           ${data.ui.ctaOrder}
         </a>
         <a href="${data.brand.whatsappUrl}" target="_blank" rel="noopener noreferrer" class="px-7 py-3 rounded-lg font-headline font-semibold text-sm bg-emerald-600 hover:bg-emerald-700 text-white transition-colors">

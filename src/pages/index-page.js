@@ -14,6 +14,7 @@ module.exports = function renderIndexPage(lang = 'ar') {
   const data = getSiteData(lang);
   const isFrench = lang === 'fr';
   const basePath = isFrench ? '../' : '';
+  const langPrefix = isFrench ? '/fr/' : '/';
 
   const head = renderHead({
     title: `${data.brand.name} | ${data.brand.slogan}`,
@@ -50,10 +51,10 @@ module.exports = function renderIndexPage(lang = 'ar') {
           </p>
 
           <div class="flex flex-wrap gap-4 pt-4">
-            <a href="services.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-headline font-bold text-base bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
+            <a href="${langPrefix}services.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-headline font-bold text-base bg-brand text-white hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 transition-colors shadow-sm">
               ${data.ui.ctaDiscover}
             </a>
-            <a href="contact.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-headline font-semibold text-base border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 transition-colors">
+            <a href="${langPrefix}contact.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-headline font-semibold text-base border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 transition-colors">
               ${data.ui.ctaOrder}
             </a>
           </div>
@@ -155,7 +156,7 @@ module.exports = function renderIndexPage(lang = 'ar') {
               <span class="text-xs font-accent uppercase tracking-wider text-brand dark:text-brand-dark font-bold block">${data.ui.homeTeaserTag}</span>
               <p class="text-sm font-headline font-semibold text-slate-900 dark:text-white">${data.ui.homeTeaserHeading}</p>
             </div>
-            <a href="about.html" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-brand hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 text-white font-headline font-bold text-sm transition-all shadow-sm shrink-0 group">
+            <a href="${langPrefix}about.html" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-brand hover:bg-brand-hover dark:bg-brand-dark dark:hover:bg-blue-600 text-white font-headline font-bold text-sm transition-all shadow-sm shrink-0 group">
               <span>${data.ui.homeTeaserBtn}</span>
               <svg class="w-4 h-4 ${isFrench ? 'transition-transform group-hover:translate-x-1' : 'rotate-180 transition-transform group-hover:-translate-x-1'}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
@@ -198,7 +199,7 @@ module.exports = function renderIndexPage(lang = 'ar') {
             </p>
           </div>
           <div class="pt-2">
-            <a href="services.html#${s.id}" class="text-sm font-headline font-bold text-brand dark:text-brand-dark inline-flex items-center gap-1 hover:underline">
+            <a href="${langPrefix}services.html#${s.id}" class="text-sm font-headline font-bold text-brand dark:text-brand-dark inline-flex items-center gap-1 hover:underline">
               <span>${isFrench ? 'Découvrir le service' : 'اكتشف الخدمة'}</span>
               <span class="font-latin">${isFrench ? '&rarr;' : '&larr;'}</span>
             </a>
@@ -246,7 +247,7 @@ module.exports = function renderIndexPage(lang = 'ar') {
         ${data.ui.ctaSectionDesc}
       </p>
       <div class="flex flex-wrap justify-center gap-4 pt-4">
-        <a href="contact.html" class="px-8 py-3.5 rounded-lg font-headline font-bold text-base bg-brand-dark text-white hover:bg-blue-600 transition-colors shadow-md">
+        <a href="${langPrefix}contact.html" class="px-8 py-3.5 rounded-lg font-headline font-bold text-base bg-brand-dark text-white hover:bg-blue-600 transition-colors shadow-md">
           ${data.ui.ctaOrder}
         </a>
         <a href="${data.brand.whatsappUrl}" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-lg font-headline font-semibold text-base bg-emerald-600 hover:bg-emerald-700 text-white transition-colors flex items-center gap-2">
